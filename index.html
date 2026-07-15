@@ -703,6 +703,20 @@ footer{background:var(--ink);padding:56px 48px 32px;}
   .page-header-content{padding:36px 24px;}
   .hero{min-height:80vh;}
 }
+@media(max-width:768px){
+  div[style*="grid-template-columns:repeat(3,1fr)"],
+  div[style*="grid-template-columns:repeat(4,1fr)"],
+  div[style*="grid-template-columns:1fr 1fr 1fr"],
+  div[style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+  div[style*="gap:64px"]{gap:32px !important;}
+  div[style*="padding:80px 48px"],
+  div[style*="padding:72px 48px"],
+  div[style*="padding:64px 48px"]{padding-left:20px !important;padding-right:20px !important;}
+  section[style*="padding:72px 48px"],
+  section[style*="padding:64px 48px"]{padding-left:20px !important;padding-right:20px !important;}
+}
 
 /* ══ PAGE NAV LINKS ══════════════════════════════════════════ */
 .page-nav-links{
