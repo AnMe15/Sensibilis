@@ -3008,46 +3008,28 @@ rd();step(1);
   <div class="content-block">
     <div style="max-width:780px;margin:0 auto;">
 
-      <!-- Schrittanzeige -->
-      <div style="display:flex;gap:8px;margin-bottom:36px;">
-        <div id="chk-step-1" style="flex:1;height:4px;border-radius:2px;background:#B8924A;transition:background .3s;"></div>
-        <div id="chk-step-2" style="flex:1;height:4px;border-radius:2px;background:rgba(184,146,74,.2);transition:background .3s;"></div>
-        <div id="chk-step-3" style="flex:1;height:4px;border-radius:2px;background:rgba(184,146,74,.2);transition:background .3s;"></div>
+      <p style="font-size:14px;color:var(--txt2);font-style:italic;margin:0 0 32px;">Setzen Sie einen Haken bei allem, was in Ihrem Betrieb bereits umgesetzt ist &mdash; auch wenn es nur einzelne Punkte sind.</p>
+
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B8924A;margin-bottom:12px;">Bestandsaufnahme</div>
+      <div class="chk-item" onclick="this.classList.toggle('checked')"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, welche KI-Tools meine Mitarbeiter gesch&auml;ftlich nutzen.</div></div>
+      <div class="chk-item" onclick="this.classList.toggle('checked')"><div class="chk-box"></div><div class="chk-label">Wir haben eine interne Regelung, was erlaubt ist und was nicht.</div></div>
+      <div class="chk-item" onclick="this.classList.toggle('checked')"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, ob unsere Tools personenbezogene Daten verarbeiten.</div></div>
+
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B8924A;margin:28px 0 12px;">Datenschutz &amp; DSGVO</div>
+      <div class="chk-item" onclick="this.classList.toggle('checked')"><div class="chk-box"></div><div class="chk-label">Kundendaten werden nicht ungep&uuml;ft in KI-Tools wie ChatGPT eingegeben.</div></div>
+      <div class="chk-item" onclick="this.classList.toggle('checked')"><div class="chk-box"></div><div class="chk-label">Wir nutzen KI-Tools mit DSGVO-konformen Einstellungen.</div></div>
+      <div class="chk-item" onclick="this.classList.toggle('checked')"><div class="chk-box"></div><div class="chk-label">Es gibt eine klare Ansprechperson f&uuml;r Datenschutzfragen im Betrieb.</div></div>
+
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B8924A;margin:28px 0 12px;">EU AI Act</div>
+      <div class="chk-item" onclick="this.classList.toggle('checked')"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, in welche Risikoklasse unsere KI-Nutzung f&auml;llt.</div></div>
+      <div class="chk-item" onclick="this.classList.toggle('checked')"><div class="chk-box"></div><div class="chk-label">KI-generierte Inhalte auf unserer Website oder im Marketing sind als solche erkennbar.</div></div>
+      <div class="chk-item" onclick="this.classList.toggle('checked')"><div class="chk-box"></div><div class="chk-label">Wir dokumentieren unsere KI-Nutzung &mdash; strukturiert und nachvollziehbar.</div></div>
+
+      <div style="margin-top:32px;margin-bottom:28px;">
+        <button class="btn btn-red" onclick="chkShowResult()" style="width:100%;justify-content:center;">Ergebnis anzeigen &rarr;</button>
       </div>
 
-      <!-- Abschnitt 1 -->
-      <div id="chk-sec-1">
-        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B8924A;margin-bottom:6px;">Schritt 1 von 3</div>
-        <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin:0 0 8px;">Bestandsaufnahme</h3>
-        <p style="font-size:13px;color:var(--txt2);font-style:italic;margin:0 0 20px;">Setzen Sie einen Haken bei allem, was in Ihrem Betrieb bereits umgesetzt ist &mdash; auch wenn es nur einzelne Punkte sind.</p>
-        <div class="chk-item" onclick="chkToggle(this,1)"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, welche KI-Tools meine Mitarbeiter gesch&auml;ftlich nutzen.</div></div>
-        <div class="chk-item" onclick="chkToggle(this,1)"><div class="chk-box"></div><div class="chk-label">Wir haben eine interne Regelung, was erlaubt ist und was nicht.</div></div>
-        <div class="chk-item" onclick="chkToggle(this,1)"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, ob unsere Tools personenbezogene Daten verarbeiten.</div></div>
-        <div style="margin-top:24px;text-align:right;"><button class="btn btn-red" onclick="chkNextSection(2)">Weiter &rarr;</button></div>
-      </div>
-
-      <!-- Abschnitt 2 -->
-      <div id="chk-sec-2" style="display:none;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B8924A;margin-bottom:6px;">Schritt 2 von 3</div>
-        <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin:0 0 20px;">Datenschutz &amp; DSGVO</h3>
-        <div class="chk-item" onclick="chkToggle(this,2)"><div class="chk-box"></div><div class="chk-label">Kundendaten werden nicht ungep&uuml;ft in KI-Tools wie ChatGPT eingegeben.</div></div>
-        <div class="chk-item" onclick="chkToggle(this,2)"><div class="chk-box"></div><div class="chk-label">Wir nutzen KI-Tools mit DSGVO-konformen Einstellungen.</div></div>
-        <div class="chk-item" onclick="chkToggle(this,2)"><div class="chk-box"></div><div class="chk-label">Es gibt eine klare Ansprechperson f&uuml;r Datenschutzfragen im Betrieb.</div></div>
-        <div style="margin-top:24px;text-align:right;"><button class="btn btn-red" onclick="chkNextSection(3)">Weiter &rarr;</button></div>
-      </div>
-
-      <!-- Abschnitt 3 -->
-      <div id="chk-sec-3" style="display:none;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B8924A;margin-bottom:6px;">Schritt 3 von 3</div>
-        <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin:0 0 20px;">EU AI Act</h3>
-        <div class="chk-item" onclick="chkToggle(this,3)"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, in welche Risikoklasse unsere KI-Nutzung f&auml;llt.</div></div>
-        <div class="chk-item" onclick="chkToggle(this,3)"><div class="chk-box"></div><div class="chk-label">KI-generierte Inhalte auf unserer Website oder im Marketing sind als solche erkennbar.</div></div>
-        <div class="chk-item" onclick="chkToggle(this,3)"><div class="chk-box"></div><div class="chk-label">Wir dokumentieren unsere KI-Nutzung &mdash; strukturiert und nachvollziehbar.</div></div>
-        <div style="margin-top:24px;text-align:right;"><button class="btn btn-red" onclick="chkShowResult(document.querySelectorAll('#page-checkliste .chk-item.checked').length)">Ergebnis anzeigen &rarr;</button></div>
-      </div>
-
-      <!-- Ergebnis -->
-      <div id="chk-result" style="display:none;opacity:0;border-radius:6px;padding:32px 36px;margin-top:32px;margin-bottom:28px;border-left:4px solid #ccc;transition:opacity .4s ease;">
+      <div id="chk-result" style="display:none;opacity:0;border-radius:6px;padding:32px 36px;margin-bottom:28px;border-left:4px solid #ccc;transition:opacity .4s ease;">
         <div id="chk-res-head" style="font-family:Georgia,serif;font-size:22px;font-weight:normal;margin-bottom:12px;"></div>
         <div id="chk-res-text" style="font-size:15px;line-height:1.75;color:var(--txt2);"></div>
       </div>
@@ -3422,25 +3404,14 @@ function handleForm(e){
 }
 
 /* ── CHECKLISTE ────────────────────────────────────────── */
-var chkScore=[0,0,0];
-function chkToggle(el,sec){
-  el.classList.toggle('checked');
-  chkScore[sec-1]=document.querySelectorAll('#chk-sec-'+sec+' .chk-item.checked').length;
-}
-function chkNextSection(sec){
-  document.getElementById('chk-sec-'+(sec-1)).style.display='none';
-  document.getElementById('chk-sec-'+sec).style.display='block';
-  document.getElementById('chk-step-'+sec).style.background='#B8924A';
-  document.getElementById('page-checkliste .content-block')||document.querySelector('#page-checkliste .content-block');
-  window.scrollTo({top:document.getElementById('page-checkliste').offsetTop,behavior:'smooth'});
-}
-function chkShowResult(score){
+function chkShowResult(){
+  var score=document.querySelectorAll('#page-checkliste .chk-item.checked').length;
   var res=document.getElementById('chk-result');
   var head=document.getElementById('chk-res-head');
   var text=document.getElementById('chk-res-text');
   if(score>=7){
-    res.style.background='rgba(47,89,67,.07)';res.style.borderLeftColor='#2F5943';
-    head.style.color='#2F5943';head.textContent='Gut aufgestellt.';
+    res.style.background='rgba(13,28,63,.06)';res.style.borderLeftColor='#0D1C3F';
+    head.style.color='#0D1C3F';head.textContent='Gut aufgestellt.';
     text.textContent='Sie haben bereits vieles im Griff. Für eine vollständige, prüfungssichere Dokumentation empfehle ich den KI Pass — er schließt die letzten Lücken und liefert ein exportfertiges Ergebnis.';
   } else if(score>=4){
     res.style.background='rgba(184,146,74,.07)';res.style.borderLeftColor='#B8924A';
@@ -3456,15 +3427,7 @@ function chkShowResult(score){
   document.getElementById('chk-cta').style.display='block';
 }
 function chkReset(){
-  chkScore=[0,0,0];
   document.querySelectorAll('#page-checkliste .chk-item').forEach(function(el){el.classList.remove('checked');});
-  ['chk-next-1','chk-next-2'].forEach(function(id){var b=document.getElementById(id);if(b)b.style.display='none';});
-  document.getElementById('chk-sec-1').style.display='block';
-  document.getElementById('chk-sec-2').style.display='none';
-  document.getElementById('chk-sec-3').style.display='none';
-  ['chk-step-1','chk-step-2','chk-step-3'].forEach(function(id,i){
-    document.getElementById(id).style.background=i===0?'#B8924A':'rgba(184,146,74,.2)';
-  });
   var res=document.getElementById('chk-result');
   res.style.opacity='0';res.style.display='none';
   document.getElementById('chk-cta').style.display='none';
