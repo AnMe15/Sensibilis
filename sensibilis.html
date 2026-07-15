@@ -1203,7 +1203,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
     </div>
     <div class="use-grid">
       <div class="use-card" style="border-left:4px solid var(--c);"><div class="use-icon" style="background:var(--c);">&#x2709;</div><div><h4>E-Mail &amp; Kommunikation</h4><p>Antworten vorbereiten, Texte formulieren, Anfragen sortieren &mdash; KI als Schreibassistent f&uuml;r das ganze Team.</p></div></div>
-      <div class="use-card" style="border-left:4px solid var(--g);"><div class="use-icon" style="background:var(--g);">&#x1F4CB;</div><div><h4>Dokumentation &amp; Protokolle</h4><p>Besprechungen zusammenfassen, &Uuml;bergaben strukturieren, Handbu&#807;cher aktuell halten &mdash; ohne Extrazeit.</p></div></div>
+      <div class="use-card" style="border-left:4px solid var(--g);"><div class="use-icon" style="background:var(--g);">&#x1F4CB;</div><div><h4>Dokumentation &amp; Protokolle</h4><p>Besprechungen zusammenfassen, &Uuml;bergaben strukturieren, Handb&uuml;cher aktuell halten &mdash; ohne Extrazeit.</p></div></div>
       <div class="use-card" style="border-left:4px solid var(--n);"><div class="use-icon" style="background:var(--n);">&#x1F4AC;</div><div><h4>Kundenservice &amp; FAQ</h4><p>H&auml;ufige Fragen automatisch beantworten, Chatbot auf der Website, Erstreaktion rund um die Uhr.</p></div></div>
       <div class="use-card" style="border-left:4px solid var(--c);"><div class="use-icon" style="background:var(--c);">&#x1F4F1;</div><div><h4>Marketing &amp; Social Media</h4><p>Beitr&auml;ge erstellen, Texte anpassen, Ideen generieren &mdash; ohne externe Agentur.</p></div></div>
       <div class="use-card" style="border-left:4px solid var(--g);"><div class="use-icon" style="background:var(--g);">&#x1F465;</div><div><h4>HR &amp; Onboarding</h4><p>Stellenausschreibungen, Einarbeitungspl&auml;ne, Wissensdokumente &mdash; strukturiert, aktuell, einheitlich.</p></div></div>
@@ -3496,8 +3496,9 @@ rd();step(1);
 <script>
 (function(){
   var aktiveMonat=[7]; /* Monatszahlen: 7=Juli, 8=August usw. */
-  if(aktiveMonat.indexOf(new Date().getMonth()+1)!==-1){
-    document.getElementById('juli-stempel').style.display='flex';
+  var stempel=document.getElementById('juli-stempel');
+  if(stempel&&aktiveMonat.indexOf(new Date().getMonth()+1)!==-1){
+    stempel.style.display='flex';
   }
 })();
 </script>

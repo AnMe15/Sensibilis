@@ -443,6 +443,18 @@ Die drei `BlogPosting`-Einträge aus dem JSON-LD der `sensibilis.html` entfernt.
 
 ---
 
+## Bugfix: Juli-Stempel Null-Sicherung (15.07.2026)
+
+`document.getElementById('juli-stempel')` wird jetzt in Variable `stempel` gespeichert und vor dem Zugriff auf `.style` geprüft (`if(stempel&&...)`). Verhindert TypeError falls Element entfernt wird.
+
+---
+
+## Bugfix: Handbücher Zeichenfehler (15.07.2026)
+
+`Handbu&#807;cher` (Combining Cedilla, falsch) ersetzt durch `Handb&uuml;cher` (korrektes ü).
+
+---
+
 ## Offene Punkte
 
 - **Kontaktformular**: Aktuell kein echter Versand. Beim Go-Live Formspree einbinden.
