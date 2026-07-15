@@ -3007,41 +3007,45 @@ rd();step(1);
   </div>
   <div class="content-block">
     <div style="max-width:780px;margin:0 auto;">
-      <p style="font-size:16px;color:var(--txt2);line-height:1.75;margin-bottom:40px;">Nutzen Sie KI in Ihrem Betrieb &mdash; oder planen es? Dann gilt der EU AI Act auch f&uuml;r Sie. Klicken Sie alle Punkte an, die in Ihrem Unternehmen bereits umgesetzt sind.</p>
 
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:44px;">
-        <div style="flex:1;height:4px;background:rgba(13,28,63,.1);border-radius:2px;overflow:hidden;">
-          <div id="chk-bar" style="height:100%;width:0%;background:var(--g);border-radius:2px;transition:width .4s ease;"></div>
-        </div>
-        <div id="chk-count" style="font-size:13px;font-weight:700;color:var(--g);min-width:40px;text-align:right;">0 / 9</div>
+      <!-- Schrittanzeige -->
+      <div style="display:flex;gap:8px;margin-bottom:36px;">
+        <div id="chk-step-1" style="flex:1;height:4px;border-radius:2px;background:#B8924A;transition:background .3s;"></div>
+        <div id="chk-step-2" style="flex:1;height:4px;border-radius:2px;background:rgba(184,146,74,.2);transition:background .3s;"></div>
+        <div id="chk-step-3" style="flex:1;height:4px;border-radius:2px;background:rgba(184,146,74,.2);transition:background .3s;"></div>
       </div>
 
-      <div style="margin-bottom:36px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:16px;">Abschnitt 1 &mdash; Bestandsaufnahme</div>
-        <div class="chk-item" onclick="chkToggle(this)"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, welche KI-Tools meine Mitarbeiter gesch&auml;ftlich nutzen.</div></div>
-        <div class="chk-item" onclick="chkToggle(this)"><div class="chk-box"></div><div class="chk-label">Wir haben eine interne Regelung, was erlaubt ist und was nicht.</div></div>
-        <div class="chk-item" onclick="chkToggle(this)"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, ob unsere Tools personenbezogene Daten verarbeiten.</div></div>
+      <!-- Abschnitt 1 -->
+      <div id="chk-sec-1">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B8924A;margin-bottom:6px;">Schritt 1 von 3</div>
+        <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin:0 0 20px;">Bestandsaufnahme</h3>
+        <div class="chk-item" onclick="chkToggle(this,1)"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, welche KI-Tools meine Mitarbeiter gesch&auml;ftlich nutzen.</div></div>
+        <div class="chk-item" onclick="chkToggle(this,1)"><div class="chk-box"></div><div class="chk-label">Wir haben eine interne Regelung, was erlaubt ist und was nicht.</div></div>
+        <div class="chk-item" onclick="chkToggle(this,1)"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, ob unsere Tools personenbezogene Daten verarbeiten.</div></div>
+        <div style="margin-top:24px;text-align:right;"><button id="chk-next-1" class="btn btn-red" onclick="chkNextSection(2)" style="display:none;">Weiter &rarr;</button></div>
       </div>
 
-      <div style="margin-bottom:36px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:16px;">Abschnitt 2 &mdash; Datenschutz &amp; DSGVO</div>
-        <div class="chk-item" onclick="chkToggle(this)"><div class="chk-box"></div><div class="chk-label">Kundendaten werden nicht ungep&uuml;ft in KI-Tools wie ChatGPT eingegeben.</div></div>
-        <div class="chk-item" onclick="chkToggle(this)"><div class="chk-box"></div><div class="chk-label">Wir nutzen KI-Tools mit DSGVO-konformen Einstellungen.</div></div>
-        <div class="chk-item" onclick="chkToggle(this)"><div class="chk-box"></div><div class="chk-label">Es gibt eine klare Ansprechperson f&uuml;r Datenschutzfragen im Betrieb.</div></div>
+      <!-- Abschnitt 2 -->
+      <div id="chk-sec-2" style="display:none;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B8924A;margin-bottom:6px;">Schritt 2 von 3</div>
+        <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin:0 0 20px;">Datenschutz &amp; DSGVO</h3>
+        <div class="chk-item" onclick="chkToggle(this,2)"><div class="chk-box"></div><div class="chk-label">Kundendaten werden nicht ungep&uuml;ft in KI-Tools wie ChatGPT eingegeben.</div></div>
+        <div class="chk-item" onclick="chkToggle(this,2)"><div class="chk-box"></div><div class="chk-label">Wir nutzen KI-Tools mit DSGVO-konformen Einstellungen.</div></div>
+        <div class="chk-item" onclick="chkToggle(this,2)"><div class="chk-box"></div><div class="chk-label">Es gibt eine klare Ansprechperson f&uuml;r Datenschutzfragen im Betrieb.</div></div>
+        <div style="margin-top:24px;text-align:right;"><button id="chk-next-2" class="btn btn-red" onclick="chkNextSection(3)" style="display:none;">Weiter &rarr;</button></div>
       </div>
 
-      <div style="margin-bottom:44px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:16px;">Abschnitt 3 &mdash; EU AI Act</div>
-        <div class="chk-item" onclick="chkToggle(this)"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, in welche Risikoklasse unsere KI-Nutzung f&auml;llt.</div></div>
-        <div class="chk-item" onclick="chkToggle(this)"><div class="chk-box"></div><div class="chk-label">KI-generierte Inhalte auf unserer Website oder im Marketing sind als solche erkennbar.</div></div>
-        <div class="chk-item" onclick="chkToggle(this)"><div class="chk-box"></div><div class="chk-label">Wir dokumentieren unsere KI-Nutzung &mdash; strukturiert und nachvollziehbar.</div></div>
+      <!-- Abschnitt 3 -->
+      <div id="chk-sec-3" style="display:none;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B8924A;margin-bottom:6px;">Schritt 3 von 3</div>
+        <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin:0 0 20px;">EU AI Act</h3>
+        <div class="chk-item" onclick="chkToggle(this,3)"><div class="chk-box"></div><div class="chk-label">Ich wei&szlig;, in welche Risikoklasse unsere KI-Nutzung f&auml;llt.</div></div>
+        <div class="chk-item" onclick="chkToggle(this,3)"><div class="chk-box"></div><div class="chk-label">KI-generierte Inhalte auf unserer Website oder im Marketing sind als solche erkennbar.</div></div>
+        <div class="chk-item" onclick="chkToggle(this,3)"><div class="chk-box"></div><div class="chk-label">Wir dokumentieren unsere KI-Nutzung &mdash; strukturiert und nachvollziehbar.</div></div>
       </div>
 
-      <div style="margin-bottom:28px;">
-        <button class="btn btn-red" onclick="chkShowResult(document.querySelectorAll('#page-checkliste .chk-item.checked').length)" style="width:100%;justify-content:center;">Ergebnis anzeigen &rarr;</button>
-      </div>
-
-      <div id="chk-result" style="display:none;opacity:0;border-radius:6px;padding:32px 36px;margin-bottom:28px;border-left:4px solid #ccc;transition:opacity .4s ease;">
+      <!-- Ergebnis -->
+      <div id="chk-result" style="display:none;opacity:0;border-radius:6px;padding:32px 36px;margin-top:32px;margin-bottom:28px;border-left:4px solid #ccc;transition:opacity .4s ease;">
         <div id="chk-res-head" style="font-family:Georgia,serif;font-size:22px;font-weight:normal;margin-bottom:12px;"></div>
         <div id="chk-res-text" style="font-size:15px;line-height:1.75;color:var(--txt2);"></div>
       </div>
@@ -3050,6 +3054,7 @@ rd();step(1);
         <button class="btn btn-red" onclick="nav('kontakt')">Erstgespr&auml;ch anfragen &rarr;</button>
         <button class="btn btn-out" onclick="chkReset()" style="margin-left:12px;">Neu starten</button>
       </div>
+
     </div>
   </div>
   <footer style="background:var(--n);padding:28px 48px;">
@@ -3411,16 +3416,25 @@ function handleForm(e){
 }
 
 /* ── CHECKLISTE ────────────────────────────────────────── */
-function chkToggle(el){
+var chkScore=[0,0,0];
+function chkToggle(el,sec){
   el.classList.toggle('checked');
-  chkUpdate();
+  var items=document.querySelectorAll('#chk-sec-'+sec+' .chk-item');
+  var done=document.querySelectorAll('#chk-sec-'+sec+' .chk-item.checked').length;
+  chkScore[sec-1]=done;
+  var btn=document.getElementById('chk-next-'+sec);
+  if(btn){btn.style.display=done===items.length?'inline-flex':'none';}
+  if(sec===3&&done===items.length){
+    document.getElementById('chk-step-3').style.background='#B8924A';
+    chkShowResult(chkScore[0]+chkScore[1]+chkScore[2]);
+  }
 }
-function chkUpdate(){
-  var items=document.querySelectorAll('#page-checkliste .chk-item');
-  var checked=document.querySelectorAll('#page-checkliste .chk-item.checked').length;
-  document.getElementById('chk-bar').style.width=(checked/items.length*100)+'%';
-  document.getElementById('chk-count').textContent=checked+' / '+items.length;
-  if(checked===items.length){chkShowResult(checked);}
+function chkNextSection(sec){
+  document.getElementById('chk-sec-'+(sec-1)).style.display='none';
+  document.getElementById('chk-sec-'+sec).style.display='block';
+  document.getElementById('chk-step-'+sec).style.background='#B8924A';
+  document.getElementById('page-checkliste .content-block')||document.querySelector('#page-checkliste .content-block');
+  window.scrollTo({top:document.getElementById('page-checkliste').offsetTop,behavior:'smooth'});
 }
 function chkShowResult(score){
   var res=document.getElementById('chk-result');
@@ -3444,9 +3458,15 @@ function chkShowResult(score){
   document.getElementById('chk-cta').style.display='block';
 }
 function chkReset(){
+  chkScore=[0,0,0];
   document.querySelectorAll('#page-checkliste .chk-item').forEach(function(el){el.classList.remove('checked');});
-  document.getElementById('chk-bar').style.width='0%';
-  document.getElementById('chk-count').textContent='0 / 9';
+  ['chk-next-1','chk-next-2'].forEach(function(id){var b=document.getElementById(id);if(b)b.style.display='none';});
+  document.getElementById('chk-sec-1').style.display='block';
+  document.getElementById('chk-sec-2').style.display='none';
+  document.getElementById('chk-sec-3').style.display='none';
+  ['chk-step-1','chk-step-2','chk-step-3'].forEach(function(id,i){
+    document.getElementById(id).style.background=i===0?'#B8924A':'rgba(184,146,74,.2)';
+  });
   var res=document.getElementById('chk-result');
   res.style.opacity='0';res.style.display='none';
   document.getElementById('chk-cta').style.display='none';
