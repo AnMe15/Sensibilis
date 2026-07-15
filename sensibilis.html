@@ -330,7 +330,7 @@ nav{
 }
 .sec-hd p{font-size:16px;color:var(--txt);max-width:560px;line-height:1.7;opacity:.75;}
 
-.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;}
 .service-card{
   position:relative;overflow:hidden;cursor:pointer;
   min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;
@@ -783,6 +783,12 @@ footer{background:var(--ink);padding:56px 48px 32px;}
 .ref-card-stat{font-size:14px;font-weight:600;color:var(--iv);text-align:center;}
 .ref-card-sub{font-size:12px;color:rgba(243,237,227,.6);text-align:center;line-height:1.5;}
 
+/* ── BRAND-S (Sensibilis Markenname-S) ──────────────────── */
+.brand-s{font-style:italic;color:var(--c);}
+
+/* ── SPLIT HERO IMAGE ───────────────────────────────────── */
+.split-hero-img{height:100%;width:auto;object-fit:cover;object-position:top center;display:block;}
+
 /* ── GOLD DIVIDER ───────────────────────────────────────── */
 .gold-divider{background:rgba(184,146,74,.55);height:2px;}
 
@@ -882,8 +888,8 @@ footer{background:var(--ink);padding:56px 48px 32px;}
         <span class="eyebrow">KI &middot; Digitalisierung &middot; Zukunftsf&auml;higkeit</span>
       </div>
       <h1>KI-Beratung f&uuml;r kleine Betriebe.<br><em>Einfach. Konform. Ohne IT.</em></h1>
-      <p class="hero-tag"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; KI-Beratung f&uuml;r kleine Unternehmen. Ohne IT-Abteilung. Ohne Umwege.</p>
-      <p class="hero-body">KI ist l&auml;ngst Alltag &mdash; auch f&uuml;r Betriebe ohne eigene IT. <em style="font-style:italic;color:var(--c);">S</em>ensibilis entwickelt praxisfertige Tools und begleitet Unternehmen pers&ouml;nlich: strukturiert, verst&auml;ndlich und genau auf Ihre Branche abgestimmt.</p>
+      <p class="hero-tag"><em class="brand-s">S</em>ensibilis &mdash; KI-Beratung f&uuml;r kleine Unternehmen. Ohne IT-Abteilung. Ohne Umwege.</p>
+      <p class="hero-body">KI ist l&auml;ngst Alltag &mdash; auch f&uuml;r Betriebe ohne eigene IT. <em class="brand-s">S</em>ensibilis entwickelt praxisfertige Tools und begleitet Unternehmen pers&ouml;nlich: strukturiert, verst&auml;ndlich und genau auf Ihre Branche abgestimmt.</p>
       <div class="hero-ctas">
         <button class="btn btn-red" onclick="nav('kontakt')">Erstgespr&auml;ch anfragen</button>
         <button class="btn btn-out" onclick="nav('zukunft')">Mehr erfahren</button>
@@ -916,7 +922,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
   <section class="sec-iv">
     <div class="sec-inner">
       <div style="text-align:center;margin-bottom:48px;">
-        <span class="eyebrow" style="color:var(--c);">Was <em style="font-style:italic;color:var(--c);">S</em>ensibilis ist</span>
+        <span class="eyebrow" style="color:var(--c);">Was <em class="brand-s">S</em>ensibilis ist</span>
         <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:clamp(28px,4vw,48px);color:var(--n);letter-spacing:-.025em;line-height:1.1;margin:12px 0 0;">Zwei S&auml;ulen.<br><em style="color:var(--c);">Ein Versprechen.</em></h2>
       </div>
       <div class="saeule-grid">
@@ -952,14 +958,14 @@ footer{background:var(--ink);padding:56px 48px 32px;}
   <div class="phase-strip">
     <div class="phase-inner">
       <div class="sec-hd" style="color:var(--iv);">
-        <span class="eyebrow">So arbeitet <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="eyebrow">So arbeitet <em class="brand-s">S</em>ensibilis</span>
         <h2 style="color:var(--iv);">Vier Phasen.<br><span style="font-style:italic;color:var(--g);">Ein klarer Weg.</span></h2>
       </div>
       <div class="phase-grid">
         <div class="phase-item"><div class="phase-dot">1</div><h4>Analyse</h4><p>Wo stehen Sie heute? Welche KI-Tools werden genutzt? Was ist dokumentiert, was nicht?</p></div>
         <div class="phase-item"><div class="phase-dot">2</div><h4>Tool-Auswahl</h4><p>Welches Tool passt zu Ihrer Situation? Wir zeigen, was sinnvoll ist &mdash; ohne Umwege.</p></div>
         <div class="phase-item"><div class="phase-dot">3</div><h4>Umsetzung</h4><p>Das passende Tool wird eingef&uuml;hrt: strukturiert, verst&auml;ndlich, Schritt f&uuml;r Schritt.</p></div>
-        <div class="phase-item"><div class="phase-dot">4</div><h4>Begleitung</h4><p>Neue Tools, offene Fragen, n&auml;chste Schritte &mdash; <em style="font-style:italic;color:var(--c);">S</em>ensibilis bleibt an Ihrer Seite.</p></div>
+        <div class="phase-item"><div class="phase-dot">4</div><h4>Begleitung</h4><p>Neue Tools, offene Fragen, n&auml;chste Schritte &mdash; <em class="brand-s">S</em>ensibilis bleibt an Ihrer Seite.</p></div>
       </div>
     </div>
   </div>
@@ -970,7 +976,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
       <div class="sec-hd">
         <span class="eyebrow">Unsere Tools</span>
         <h2>Vier Tools.<br>Ein Ziel.</h2>
-        <p>Von der ersten KI-Dokumentation bis zur Prozessautomatisierung &mdash; <em style="font-style:italic;color:var(--c);">S</em>ensibilis entwickelt Software, die im Betrieb wirklich funktioniert.</p>
+        <p>Von der ersten KI-Dokumentation bis zur Prozessautomatisierung &mdash; <em class="brand-s">S</em>ensibilis entwickelt Software, die im Betrieb wirklich funktioniert.</p>
       </div>
       <div class="service-grid">
         <div class="service-card" onclick="nav('kipass')">
@@ -1021,15 +1027,15 @@ footer{background:var(--ink);padding:56px 48px 32px;}
   <section class="split">
     <div class="split-img" style="background:#0a0f1e;">
       <div style="position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;">
-        <img alt="Annett Mende — KI-Beraterin und Gründerin von Sensibilis, Bad Bodenteich" src="img/annett-mende.png" style="height:100%;width:auto;object-fit:cover;object-position:top center;display:block;">
+        <img alt="Annett Mende — KI-Beraterin und Gründerin von Sensibilis, Bad Bodenteich" src="img/annett-mende.png" class="split-hero-img">
       </div>
       <div class="split-img-overlay" style="background:linear-gradient(to top,rgba(10,15,30,.72) 0%,transparent 55%);"></div>
     </div>
     <div class="split-text">
-      <span class="eyebrow">Warum <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+      <span class="eyebrow">Warum <em class="brand-s">S</em>ensibilis</span>
       <h2>Begleitung, die<br><em>versteht.</em></h2>
-      <p>KI-Tools sind wertlos, wenn niemand wei&szlig; wie man sie einf&uuml;hrt. <em style="font-style:italic;color:var(--c);">S</em>ensibilis kennt beide Seiten &mdash; die Technologie und den Alltag im Betrieb.</p>
-      <p style="margin-top:16px;font-size:15px;color:var(--txt2);line-height:1.7;">Annett Mende gr&uuml;ndete <em style="font-style:italic;color:var(--c);">S</em>ensibilis mit dem Ziel, KI-Einf&uuml;hrung f&uuml;r Unternehmen verst&auml;ndlich und machbar zu machen &mdash; ohne IT-Abteilung, ohne Chaos.</p>
+      <p>KI-Tools sind wertlos, wenn niemand wei&szlig; wie man sie einf&uuml;hrt. <em class="brand-s">S</em>ensibilis kennt beide Seiten &mdash; die Technologie und den Alltag im Betrieb.</p>
+      <p style="margin-top:16px;font-size:15px;color:var(--txt2);line-height:1.7;">Annett Mende gr&uuml;ndete <em class="brand-s">S</em>ensibilis mit dem Ziel, KI-Einf&uuml;hrung f&uuml;r Unternehmen verst&auml;ndlich und machbar zu machen &mdash; ohne IT-Abteilung, ohne Chaos.</p>
       <button class="btn btn-red" style="margin-top:28px;" onclick="nav('kontakt')">Beratungsgespr&auml;ch anfragen</button>
     </div>
   </section>
@@ -1104,7 +1110,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">
           Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp;
           <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a>
@@ -1116,7 +1122,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -1130,14 +1136,14 @@ footer{background:var(--ink);padding:56px 48px 32px;}
     <div class="page-header-content">
       <div class="page-header-eyebrow">KI &amp; Zukunft</div>
       <h1>KI ist keine Frage<br>des Ob &mdash; <em>nur des Wie.</em></h1>
-      <p>Wer jetzt anf&auml;ngt, gestaltet. Wer wartet, reagiert. <em style="font-style:italic;color:var(--c);">S</em>ensibilis begleitet Unternehmen beim aktiven &Uuml;bergang.</p>
+      <p>Wer jetzt anf&auml;ngt, gestaltet. Wer wartet, reagiert. <em class="brand-s">S</em>ensibilis begleitet Unternehmen beim aktiven &Uuml;bergang.</p>
     </div>
   </div>
   <div class="content-block">
     <div class="sec-hd">
       <span class="eyebrow">Warum jetzt handeln</span>
       <h2>Drei Schritte in die neue &Auml;ra.</h2>
-      <p>KI-Transformation ist kein Sprint &mdash; es ist eine Richtung. <em style="font-style:italic;color:var(--c);">S</em>ensibilis begleitet langfristig, Schritt f&uuml;r Schritt.</p>
+      <p>KI-Transformation ist kein Sprint &mdash; es ist eine Richtung. <em class="brand-s">S</em>ensibilis begleitet langfristig, Schritt f&uuml;r Schritt.</p>
     </div>
     <div class="step-grid">
       <div class="step-card" style="border-top:4px solid var(--c);background:linear-gradient(160deg,rgba(140,26,42,.04) 0%,#fff 50%);">
@@ -1153,7 +1159,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
       <div class="step-card" style="border-top:4px solid var(--n);background:linear-gradient(160deg,rgba(13,28,63,.05) 0%,#fff 50%);">
         <div class="step-num" style="color:var(--n);opacity:.6;">03</div>
         <h3>Schritt f&uuml;r Schritt wachsen</h3>
-        <p>Neue Tools, neue Prozesse &mdash; wenn das Team bereit ist. <em style="font-style:italic;color:var(--c);">S</em>ensibilis macht sich selbst &uuml;berfl&uuml;ssig. Das ist der Plan.</p>
+        <p>Neue Tools, neue Prozesse &mdash; wenn das Team bereit ist. <em class="brand-s">S</em>ensibilis macht sich selbst &uuml;berfl&uuml;ssig. Das ist der Plan.</p>
       </div>
     </div>
     <div style="margin-top:48px;text-align:center;">
@@ -1164,7 +1170,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -1173,7 +1179,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -1211,7 +1217,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -1220,7 +1226,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -1234,7 +1240,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
     <div class="page-header-content">
       <div class="page-header-eyebrow">Unsere Tools</div>
       <h1>Software, die im<br><em>Betrieb funktioniert.</em></h1>
-      <p><em style="font-style:italic;color:var(--c);">S</em>ensibilis entwickelt praxisfertige KI-Tools f&uuml;r den Mittelstand &mdash; ohne IT-Studium, ohne Chaos.</p>
+      <p><em class="brand-s">S</em>ensibilis entwickelt praxisfertige KI-Tools f&uuml;r den Mittelstand &mdash; ohne IT-Studium, ohne Chaos.</p>
     </div>
   </div>
   <div class="content-block">
@@ -1252,7 +1258,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
       <div style="border:2px solid var(--c);padding:32px 28px;background:#1a0509;">
         <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c);margin-bottom:14px;">Weg 2</div>
         <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--iv);margin-bottom:10px;">Mit Begleitung</h3>
-        <p style="font-size:14px;color:rgba(243,237,227,.7);line-height:1.7;margin-bottom:20px;">Tool + pers&ouml;nliche Einf&uuml;hrung. <em style="font-style:italic;color:var(--c);">S</em>ensibilis begleitet Sie bei Einrichtung, Fragen und n&auml;chsten Schritten.</p>
+        <p style="font-size:14px;color:rgba(243,237,227,.7);line-height:1.7;margin-bottom:20px;">Tool + pers&ouml;nliche Einf&uuml;hrung. <em class="brand-s">S</em>ensibilis begleitet Sie bei Einrichtung, Fragen und n&auml;chsten Schritten.</p>
         <ul style="list-style:none;font-size:13px;color:rgba(243,237,227,.65);line-height:2;">
           <li>&#10003;&nbsp; Pers&ouml;nliche Einf&uuml;hrung</li>
           <li>&#10003;&nbsp; Fragen direkt kl&auml;ren</li>
@@ -1314,7 +1320,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
       <div>
         <span class="eyebrow" style="color:var(--g);">Beratung &amp; Begleitung</span>
         <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--iv);margin:12px 0 10px;">Tool gefunden, aber Fragen offen?</h3>
-        <p style="font-size:15px;color:rgba(243,237,227,.65);line-height:1.65;"><em style="font-style:italic;color:var(--c);">S</em>ensibilis begleitet Sie bei der Einf&uuml;hrung &mdash; pers&ouml;nlich, Schritt f&uuml;r Schritt.</p>
+        <p style="font-size:15px;color:rgba(243,237,227,.65);line-height:1.65;"><em class="brand-s">S</em>ensibilis begleitet Sie bei der Einf&uuml;hrung &mdash; pers&ouml;nlich, Schritt f&uuml;r Schritt.</p>
       </div>
       <button class="btn btn-out" onclick="nav('kontakt')">Gespr&auml;ch anfragen &rarr;</button>
     </div>
@@ -1323,7 +1329,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -1332,7 +1338,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -1669,7 +1675,7 @@ window.cpdStart=function(){
     </div>
     <div class="page-nav-links"><a href="#" onclick="nav('tools')">Alle Tools</a><a href="#" onclick="nav('kipass')">KI Pass</a><a href="#" onclick="nav('preise')">Preise &amp; Pakete</a></div>
   </div>
-  <footer class="footer-mini"><div class="footer-mini-inner"><div><div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div></div><div class="footer-mini-legal"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a><span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span></div></div></footer>
+  <footer class="footer-mini"><div class="footer-mini-inner"><div><div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div></div><div class="footer-mini-legal"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a><span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span></div></div></footer>
 </div>
 
 <!-- ══ PAGE: WEBSITE CHECK ════════════════════════════════════ -->
@@ -1719,7 +1725,7 @@ window.cpdStart=function(){
     </div>
     <div class="page-nav-links"><a href="#" onclick="nav('tools')">Alle Tools</a><a href="#" onclick="nav('kipass')">KI Pass</a><a href="#" onclick="nav('beratung')">Beratung</a></div>
   </div>
-  <footer class="footer-mini"><div class="footer-mini-inner"><div><div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div></div><div class="footer-mini-legal"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a><span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span></div></div></footer>
+  <footer class="footer-mini"><div class="footer-mini-inner"><div><div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div></div><div class="footer-mini-legal"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a><span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span></div></div></footer>
 </div>
 
 <!-- ══ PAGE: DMS ══════════════════════════════════════════════ -->
@@ -1769,7 +1775,7 @@ window.cpdStart=function(){
     </div>
     <div class="page-nav-links"><a href="#" onclick="nav('tools')">Alle Tools</a><a href="#" onclick="nav('webcheck')">Website-Check</a><a href="#" onclick="nav('beratung')">Beratung</a></div>
   </div>
-  <footer class="footer-mini"><div class="footer-mini-inner"><div><div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div></div><div class="footer-mini-legal"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a><span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span></div></div></footer>
+  <footer class="footer-mini"><div class="footer-mini-inner"><div><div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div></div><div class="footer-mini-legal"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a><span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span></div></div></footer>
 </div>
 
 <!-- ══ PAGE: KI PASS ═════════════════════════════════════════ -->
@@ -2055,7 +2061,7 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -2064,7 +2070,7 @@ rd();step(1);
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -2136,7 +2142,7 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -2145,7 +2151,7 @@ rd();step(1);
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -2175,7 +2181,7 @@ rd();step(1);
       <div style="background:linear-gradient(135deg,rgba(140,26,42,.08) 0%,rgba(13,28,63,.06) 100%);border-radius:8px;padding:44px 40px;border:1px solid var(--bdr);">
         <div style="font-family:Georgia,serif;font-size:22px;font-style:italic;color:var(--txt);line-height:1.6;margin-bottom:20px;">&bdquo;Ich begleite Sie, bis KI bei Ihnen wirklich arbeitet &mdash; nicht nur bis zur Pr&auml;sentation.&ldquo;</div>
         <div style="font-size:13px;font-weight:600;color:var(--c);letter-spacing:.06em;text-transform:uppercase;">Annett Mende</div>
-        <div style="font-size:12px;color:var(--txt2);margin-top:3px;">Zertifizierte KI-Managerin &middot; Gr&uuml;nderin <em style="font-style:italic;color:var(--c);">S</em>ensibilis</div>
+        <div style="font-size:12px;color:var(--txt2);margin-top:3px;">Zertifizierte KI-Managerin &middot; Gr&uuml;nderin <em class="brand-s">S</em>ensibilis</div>
       </div>
     </div>
 
@@ -2240,7 +2246,7 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -2249,7 +2255,7 @@ rd();step(1);
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -2308,7 +2314,7 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -2317,7 +2323,7 @@ rd();step(1);
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -2382,7 +2388,7 @@ rd();step(1);
         <div style="height:180px;background:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&h=300&fit=crop&q=80') center/cover;"></div>
         <div style="padding:22px 24px 26px;">
           <div style="display:flex;gap:8px;margin-bottom:10px;"><span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:3px;background:rgba(184,146,74,.12);color:var(--g);">&Uuml;ber uns</span><span style="font-size:11px;color:var(--txt2);">4 Min.</span></div>
-          <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:20px;color:var(--txt);margin:0 0 8px;"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; KI-Beratung f&uuml;r den Mittelstand in Niedersachsen</h3>
+          <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:20px;color:var(--txt);margin:0 0 8px;"><em class="brand-s">S</em>ensibilis &mdash; KI-Beratung f&uuml;r den Mittelstand in Niedersachsen</h3>
           <p style="font-size:13px;color:var(--txt2);line-height:1.6;margin:0 0 16px;">Wer steckt hinter Sensibilis, was sind die Leistungen und warum KI-Beratung aus Bad Bodenteich auch f&uuml;r Betriebe in Uelzen, Gifhorn und der L&uuml;neburger Heide relevant ist.</p>
           <span style="font-size:13px;color:var(--c);font-weight:600;">Weiterlesen &rarr;</span>
         </div>
@@ -2408,11 +2414,11 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
-        <a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a><span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a><span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -2515,7 +2521,7 @@ rd();step(1);
   </div>
   <footer class="footer-mini">
     <div class="footer-mini-inner">
-      <div><div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
+      <div><div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
       <div style="font-size:13px;color:rgba(243,237,227,.65);"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a></div>
     </div>
   </footer>
@@ -2577,7 +2583,7 @@ rd();step(1);
   </div>
   <footer class="footer-mini">
     <div class="footer-mini-inner">
-      <div><div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
+      <div><div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
       <div style="font-size:13px;color:rgba(243,237,227,.65);"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a></div>
     </div>
   </footer>
@@ -2689,7 +2695,7 @@ rd();step(1);
   </div>
   <footer class="footer-mini">
     <div class="footer-mini-inner">
-      <div><div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
+      <div><div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
       <div style="font-size:13px;color:rgba(243,237,227,.65);"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a></div>
     </div>
   </footer>
@@ -2705,19 +2711,19 @@ rd();step(1);
     <div class="page-header-overlay" style="background:linear-gradient(135deg,rgba(22,10,13,.88) 0%,rgba(13,28,63,.72) 100%);"></div>
     <div class="page-header-content">
       <div class="page-header-eyebrow">&Uuml;ber Sensibilis &nbsp;&middot;&nbsp; Juli 2026 &nbsp;&middot;&nbsp; 4 Min. Lesezeit</div>
-      <h1 style="font-size:clamp(26px,3.5vw,44px);"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; KI-Beratung<br>f&uuml;r den Mittelstand in Niedersachsen</h1>
+      <h1 style="font-size:clamp(26px,3.5vw,44px);"><em class="brand-s">S</em>ensibilis &mdash; KI-Beratung<br>f&uuml;r den Mittelstand in Niedersachsen</h1>
     </div>
   </div>
   <div class="content-block">
     <div style="max-width:760px;margin:0 auto;">
       <p style="font-size:16px;color:var(--txt2);line-height:1.8;margin-bottom:32px;font-style:italic;border-left:3px solid var(--g);padding-left:20px;">Viele kleine und mittlere Unternehmen in der Region Uelzen, Gifhorn und dem Landkreis Heidekreis wissen: KI ist das Thema der Zeit. Nur wei&szlig; kaum jemand, wo man konkret anfangen soll &mdash; ohne teure Agenturen, ohne Fachjargon, ohne das Gef&uuml;hl, abgeh&auml;ngt zu werden.</p>
 
-      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Wer steckt hinter <em style="font-style:italic;color:var(--c);">S</em>ensibilis?</h2>
-      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;"><em style="font-style:italic;color:var(--c);">S</em>ensibilis ist das Einzelunternehmen von Annett Mende aus Bad Bodenteich im Landkreis Uelzen. Annett ist ausgebildete KI-Managerin (FBS Future Education) und arbeitet seit Jahren in der Praxis mit dem Thema Digitalisierung &mdash; nicht als Theoretikerin, sondern als jemand, der selbst im Betrieb steht.</p>
-      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Als Leiterin f&uuml;r Fitness, Marketing und Kommunikation beim <strong>laVital Resort in Wesendorf</strong> hat sie KI-Tools eingesetzt, ausprobiert, angepasst &mdash; und dabei gelernt, was wirklich funktioniert und was nur gut klingt. <em style="font-style:italic;color:var(--c);">S</em>ensibilis ist das Ergebnis: praxiserprobte KI-Unterst&uuml;tzung, die f&uuml;r den Alltag kleiner und mittlerer Betriebe gemacht ist.</p>
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Wer steckt hinter <em class="brand-s">S</em>ensibilis?</h2>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;"><em class="brand-s">S</em>ensibilis ist das Einzelunternehmen von Annett Mende aus Bad Bodenteich im Landkreis Uelzen. Annett ist ausgebildete KI-Managerin (FBS Future Education) und arbeitet seit Jahren in der Praxis mit dem Thema Digitalisierung &mdash; nicht als Theoretikerin, sondern als jemand, der selbst im Betrieb steht.</p>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Als Leiterin f&uuml;r Fitness, Marketing und Kommunikation beim <strong>laVital Resort in Wesendorf</strong> hat sie KI-Tools eingesetzt, ausprobiert, angepasst &mdash; und dabei gelernt, was wirklich funktioniert und was nur gut klingt. <em class="brand-s">S</em>ensibilis ist das Ergebnis: praxiserprobte KI-Unterst&uuml;tzung, die f&uuml;r den Alltag kleiner und mittlerer Betriebe gemacht ist.</p>
 
-      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">F&uuml;r wen ist <em style="font-style:italic;color:var(--c);">S</em>ensibilis gemacht?</h2>
-      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:12px;"><em style="font-style:italic;color:var(--c);">S</em>ensibilis richtet sich an Unternehmer, Gesch&auml;ftsf&uuml;hrende und Teams, die:</p>
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">F&uuml;r wen ist <em class="brand-s">S</em>ensibilis gemacht?</h2>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:12px;"><em class="brand-s">S</em>ensibilis richtet sich an Unternehmer, Gesch&auml;ftsf&uuml;hrende und Teams, die:</p>
       <ul style="font-size:15px;color:var(--txt2);line-height:1.9;margin:0 0 18px;padding-left:24px;">
         <li>KI einsetzen wollen, aber nicht wissen wo anfangen</li>
         <li>schon Tools nutzen, aber unsicher sind ob das rechtlich in Ordnung ist</li>
@@ -2727,7 +2733,7 @@ rd();step(1);
       </ul>
       <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Der Schwerpunkt liegt auf Betrieben in der Region Uelzen, Gifhorn, L&uuml;neburg, Wolfsburg und dem Heidekreis &mdash; aber auch die &Uuml;berarbeitung bestehender Strukturen wird digital und deutschlandweit angeboten.</p>
 
-      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Was unterscheidet <em style="font-style:italic;color:var(--c);">S</em>ensibilis von einer gro&szlig;en Digitalagentur?</h2>
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Was unterscheidet <em class="brand-s">S</em>ensibilis von einer gro&szlig;en Digitalagentur?</h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;">
         <div style="padding:20px 22px;background:rgba(140,26,42,.05);border:1px solid rgba(140,26,42,.15);border-radius:6px;">
           <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--c);margin-bottom:8px;">Gro&szlig;e Agentur</div>
@@ -2749,7 +2755,7 @@ rd();step(1);
         </div>
       </div>
 
-      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Die drei Leistungen von <em style="font-style:italic;color:var(--c);">S</em>ensibilis</h2>
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Die drei Leistungen von <em class="brand-s">S</em>ensibilis</h2>
 
       <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
         <div style="padding:22px 24px;background:var(--iv);border-left:3px solid var(--c);border-radius:0 6px 6px 0;">
@@ -2767,12 +2773,12 @@ rd();step(1);
       </div>
 
       <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">KI-Beratung in der Region Uelzen und Niedersachsen</h2>
-      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;"><em style="font-style:italic;color:var(--c);">S</em>ensibilis ist in Bad Bodenteich ans&auml;ssig und bedient Unternehmen aus dem gesamten Landkreis Uelzen sowie der angrenzenden Regionen &mdash; Gifhorn, L&uuml;neburg, Wolfsburg, Celle und dem Heidekreis. Pers&ouml;nliche Beratung vor Ort ist m&ouml;glich; viele Kunden werden auch per Video-Meeting betreut.</p>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;"><em class="brand-s">S</em>ensibilis ist in Bad Bodenteich ans&auml;ssig und bedient Unternehmen aus dem gesamten Landkreis Uelzen sowie der angrenzenden Regionen &mdash; Gifhorn, L&uuml;neburg, Wolfsburg, Celle und dem Heidekreis. Pers&ouml;nliche Beratung vor Ort ist m&ouml;glich; viele Kunden werden auch per Video-Meeting betreut.</p>
       <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Gerade in l&auml;ndlicheren Regionen Niedersachsens fehlt es h&auml;ufig an Anlaufstellen, die KI-Themen praxisnah und ohne gro&szlig;en Overhead begleiten. Sensibilis schlie&szlig;t diese L&uuml;cke &mdash; mit konkreten Tools, festen Preisen und einer Beraterin, die die Herausforderungen mittelst&auml;ndischer Betriebe aus eigener Erfahrung kennt.</p>
 
       <div style="background:var(--iv);border:1px solid rgba(184,146,74,.3);border-radius:8px;padding:32px;margin:40px 0;">
         <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:8px;">Kurz gesagt</div>
-        <p style="font-size:15px;color:var(--txt);line-height:1.8;margin:0;"><em style="font-style:italic;color:var(--c);">S</em>ensibilis ist keine Agentur, die alles kann und nichts versteht. Es ist eine spezialisierte Einzelberatung f&uuml;r ein konkretes Thema: wie kleine und mittlere Unternehmen KI sinnvoll, sicher und rechtssicher einsetzen &mdash; mit einem &uuml;berschaubaren Budget und ohne IT-Abteilung.</p>
+        <p style="font-size:15px;color:var(--txt);line-height:1.8;margin:0;"><em class="brand-s">S</em>ensibilis ist keine Agentur, die alles kann und nichts versteht. Es ist eine spezialisierte Einzelberatung f&uuml;r ein konkretes Thema: wie kleine und mittlere Unternehmen KI sinnvoll, sicher und rechtssicher einsetzen &mdash; mit einem &uuml;berschaubaren Budget und ohne IT-Abteilung.</p>
       </div>
 
       <div style="margin-top:40px;padding-top:32px;border-top:1px solid var(--bdr);display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
@@ -2784,7 +2790,7 @@ rd();step(1);
   </div>
   <footer class="footer-mini">
     <div class="footer-mini-inner">
-      <div><div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; Bad Bodenteich, Landkreis Uelzen</div></div>
+      <div><div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; Bad Bodenteich, Landkreis Uelzen</div></div>
       <div style="font-size:13px;color:rgba(243,237,227,.65);"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a></div>
     </div>
   </footer>
@@ -2820,8 +2826,8 @@ rd();step(1);
         <div class="faq-a">Ja. Auch gelegentliche Nutzung von KI-Tools begr&uuml;ndet Pflichten nach dem EU AI Act. Der Schnellcheck zeigt Ihnen in 3 Minuten, was f&uuml;r Sie gilt &mdash; kostenlos und ohne Anmeldung.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span>Was macht <em style="font-style:italic;color:var(--c);">S</em>ensibilis anders als eine gro&szlig;e KI-Beratung?</span><span class="faq-icon">+</span></button>
-        <div class="faq-a"><em style="font-style:italic;color:var(--c);">S</em>ensibilis ist keine Agentur und kein Beratungskonzern. Annett Mende arbeitet pers&ouml;nlich &mdash; direkt, ohne Projektmanager dazwischen. Als KI-Beraterin aus Bad Bodenteich begleitet sie Unternehmen in der Region Uelzen, Gifhorn und der L&uuml;neburger Heide: praxisnah, schnell und ohne aufgebl&auml;hte Stundens&auml;tze.</div>
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Was macht <em class="brand-s">S</em>ensibilis anders als eine gro&szlig;e KI-Beratung?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><em class="brand-s">S</em>ensibilis ist keine Agentur und kein Beratungskonzern. Annett Mende arbeitet pers&ouml;nlich &mdash; direkt, ohne Projektmanager dazwischen. Als KI-Beraterin aus Bad Bodenteich begleitet sie Unternehmen in der Region Uelzen, Gifhorn und der L&uuml;neburger Heide: praxisnah, schnell und ohne aufgebl&auml;hte Stundens&auml;tze.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)"><span>K&ouml;nnen wir auch ein pers&ouml;nliches Beratungsgespr&auml;ch vereinbaren?</span><span class="faq-icon">+</span></button>
@@ -2829,18 +2835,18 @@ rd();step(1);
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)"><span>Wie f&uuml;hre ich KI in meinem Unternehmen ein &mdash; ohne IT-Abteilung?</span><span class="faq-icon">+</span></button>
-        <div class="faq-a"><em style="font-style:italic;color:var(--c);">S</em>ensibilis begleitet die KI-Einf&uuml;hrung in kleinen und mittleren Unternehmen Schritt f&uuml;r Schritt &mdash; ohne Vorkenntnisse, ohne eigene IT. Gemeinsam analysieren wir, welche Tools wirklich zu Ihrer Branche und Ihrem Team passen, und f&uuml;hren sie so ein, dass alle mitmachen.</div>
+        <div class="faq-a"><em class="brand-s">S</em>ensibilis begleitet die KI-Einf&uuml;hrung in kleinen und mittleren Unternehmen Schritt f&uuml;r Schritt &mdash; ohne Vorkenntnisse, ohne eigene IT. Gemeinsam analysieren wir, welche Tools wirklich zu Ihrer Branche und Ihrem Team passen, und f&uuml;hren sie so ein, dass alle mitmachen.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span>F&uuml;r welche Unternehmen ist <em style="font-style:italic;color:var(--c);">S</em>ensibilis geeignet?</span><span class="faq-icon">+</span></button>
-        <div class="faq-a"><em style="font-style:italic;color:var(--c);">S</em>ensibilis richtet sich an kleine und mittlere Unternehmen im Mittelstand &mdash; Handwerk, Gastronomie, Hotel, Dienstleistung, Gesundheit. Besonders h&auml;ufig: Betriebe in Niedersachsen, die KI einf&uuml;hren wollen, aber nicht wissen, wo sie anfangen sollen.</div>
+        <button class="faq-q" onclick="toggleFaq(this)"><span>F&uuml;r welche Unternehmen ist <em class="brand-s">S</em>ensibilis geeignet?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><em class="brand-s">S</em>ensibilis richtet sich an kleine und mittlere Unternehmen im Mittelstand &mdash; Handwerk, Gastronomie, Hotel, Dienstleistung, Gesundheit. Besonders h&auml;ufig: Betriebe in Niedersachsen, die KI einf&uuml;hren wollen, aber nicht wissen, wo sie anfangen sollen.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)"><span>Was ist der Unterschied zwischen der Beratung und dem KI Pass?</span><span class="faq-icon">+</span></button>
         <div class="faq-a">Der KI Pass ist ein digitales Tool &mdash; Sie nutzen ihn selbst, direkt im Browser, ohne Beratung. Die KI-Beratung ist pers&ouml;nlich: Annett Mende analysiert Ihren Betrieb, entwickelt eine Strategie und begleitet die Einf&uuml;hrung. Beides erg&auml;nzt sich &mdash; viele Kunden starten mit dem KI Pass und buchen anschlie&szlig;end Beratung.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span>Was ist der Content Planer von <em style="font-style:italic;color:var(--c);">S</em>ensibilis?</span><span class="faq-icon">+</span></button>
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Was ist der Content Planer von <em class="brand-s">S</em>ensibilis?</span><span class="faq-icon">+</span></button>
         <div class="faq-a">Der Content Planer ist ein KI-gest&uuml;tztes Tool f&uuml;r Redaktionsplanung und Social-Media-Texte. Sie w&auml;hlen Bereich, Kanal und Thema &mdash; die KI erstellt den Beitrag. Mit Saisonkalender, Bildvorschl&auml;gen und Export. F&uuml;r alle Branchen nutzbar.</div>
       </div>
       <div class="faq-item">
@@ -2848,8 +2854,8 @@ rd();step(1);
         <div class="faq-a">Der Website-Check analysiert Ihre Website automatisch auf drei Ebenen: DSGVO-Konformit&auml;t, KI-Optimierungspotenzial und allgemeine Usability-Probleme. Das Ergebnis ist verst&auml;ndlich erkl&auml;rt &mdash; ohne IT-Kenntnisse.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span>Was ist das DMS von <em style="font-style:italic;color:var(--c);">S</em>ensibilis?</span><span class="faq-icon">+</span></button>
-        <div class="faq-a">Das <em style="font-style:italic;color:var(--c);">S</em>ensibilis DMS ist ein einfaches Dokumentenmanagementsystem mit KI-Unterst&uuml;tzung &mdash; f&uuml;r kleine und mittlere Unternehmen ohne Serverinstallation. Dokumente hochladen, automatisch verschlagworten, per KI-Suche finden. So einfach wie eine E-Mail schreiben.</div>
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Was ist das DMS von <em class="brand-s">S</em>ensibilis?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a">Das <em class="brand-s">S</em>ensibilis DMS ist ein einfaches Dokumentenmanagementsystem mit KI-Unterst&uuml;tzung &mdash; f&uuml;r kleine und mittlere Unternehmen ohne Serverinstallation. Dokumente hochladen, automatisch verschlagworten, per KI-Suche finden. So einfach wie eine E-Mail schreiben.</div>
       </div>
     </div>
     <div style="margin-top:56px;text-align:center;">
@@ -2861,7 +2867,7 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -2870,7 +2876,7 @@ rd();step(1);
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -3087,7 +3093,7 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -3096,7 +3102,7 @@ rd();step(1);
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -3191,7 +3197,7 @@ rd();step(1);
   </div>
   <footer class="footer-mini">
     <div class="footer-mini-inner">
-      <div><div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
+      <div><div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
       <div style="font-size:13px;color:rgba(243,237,227,.65);"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a></div>
     </div>
   </footer>
@@ -3249,7 +3255,7 @@ rd();step(1);
   </div>
   <footer class="footer-mini">
     <div class="footer-mini-inner">
-      <div><div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
+      <div><div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
       <div style="font-size:13px;color:rgba(243,237,227,.65);"><a href="#" onclick="nav('impressum')">Impressum</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')">Datenschutz</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')">AGB</a></div>
     </div>
   </footer>
@@ -3269,7 +3275,7 @@ rd();step(1);
     <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin-bottom:20px;">Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
     <p style="font-size:15px;color:var(--txt);line-height:1.9;">
       Annett Mende<br>
-      <em style="font-style:italic;color:var(--c);">S</em>ensibilis<br>
+      <em class="brand-s">S</em>ensibilis<br>
       Fileitzen 44<br>
       29389 Bad Bodenteich<br>
       Deutschland
@@ -3316,7 +3322,7 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -3325,7 +3331,7 @@ rd();step(1);
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -3350,7 +3356,7 @@ rd();step(1);
 
     <h3 style="font-size:16px;color:var(--n);margin:24px 0 8px;">Datenerfassung auf dieser Website</h3>
     <p style="font-size:15px;color:var(--txt);line-height:1.8;"><strong>Wer ist verantwortlich f&uuml;r die Datenerfassung?</strong><br>
-    Die Datenverarbeitung auf dieser Website erfolgt durch die Websitebetreiberin Annett Mende (<em style="font-style:italic;color:var(--c);">S</em>ensibilis). Die Kontaktdaten finden Sie im <a href="#" onclick="nav('impressum')" style="color:var(--c);">Impressum</a>.</p>
+    Die Datenverarbeitung auf dieser Website erfolgt durch die Websitebetreiberin Annett Mende (<em class="brand-s">S</em>ensibilis). Die Kontaktdaten finden Sie im <a href="#" onclick="nav('impressum')" style="color:var(--c);">Impressum</a>.</p>
 
     <p style="font-size:15px;color:var(--txt);line-height:1.8;margin-top:14px;"><strong>Wie erfassen wir Ihre Daten?</strong><br>
     Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen &mdash; etwa &uuml;ber das Kontaktformular oder per E-Mail. Andere Daten werden beim Besuch der Website automatisch durch IT-Systeme erfasst (z.&thinsp;B. Internetbrowser, Betriebssystem, Zeitpunkt des Seitenaufrufs).</p>
@@ -3365,7 +3371,7 @@ rd();step(1);
 
     <h3 style="font-size:16px;color:var(--n);margin:20px 0 8px;">Verantwortliche Stelle</h3>
     <p style="font-size:15px;color:var(--txt);line-height:1.9;">
-      Annett Mende &mdash; <em style="font-style:italic;color:var(--c);">S</em>ensibilis<br>
+      Annett Mende &mdash; <em class="brand-s">S</em>ensibilis<br>
       Fileitzen 44<br>
       29389 Bad Bodenteich<br>
       Telefon: <a href="tel:+495824965365" style="color:var(--c);">05824 965365</a><br>
@@ -3406,7 +3412,7 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -3415,7 +3421,7 @@ rd();step(1);
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -3434,13 +3440,13 @@ rd();step(1);
   <div class="content-block" style="max-width:780px;">
 
     <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin-bottom:12px;">&sect; 1 Geltungsbereich</h2>
-    <p style="font-size:15px;color:var(--txt);line-height:1.8;">Diese Allgemeinen Gesch&auml;ftsbedingungen (AGB) gelten f&uuml;r alle Vertr&auml;ge zwischen Annett Mende, <em style="font-style:italic;color:var(--c);">S</em>ensibilis, Fileitzen 44, 29389 Bad Bodenteich (nachfolgend &bdquo;Anbieterin&ldquo;) und ihren Kunden &uuml;ber KI-Beratung, Digitalisierungsbegleitung sowie die Nutzung der angebotenen Software-Tools.</p>
+    <p style="font-size:15px;color:var(--txt);line-height:1.8;">Diese Allgemeinen Gesch&auml;ftsbedingungen (AGB) gelten f&uuml;r alle Vertr&auml;ge zwischen Annett Mende, <em class="brand-s">S</em>ensibilis, Fileitzen 44, 29389 Bad Bodenteich (nachfolgend &bdquo;Anbieterin&ldquo;) und ihren Kunden &uuml;ber KI-Beratung, Digitalisierungsbegleitung sowie die Nutzung der angebotenen Software-Tools.</p>
 
     <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin:40px 0 12px;">&sect; 2 Vertragsschluss</h2>
     <p style="font-size:15px;color:var(--txt);line-height:1.8;">Alle Angebote auf dieser Website sind freibleibend und unverbindlich. Ein Vertrag kommt erst durch schriftliche Best&auml;tigung per E-Mail oder durch Unterzeichnung eines Auftragsformulars zustande. Die Anbieterin beh&auml;lt sich vor, Anfragen ohne Angabe von Gr&uuml;nden abzulehnen.</p>
 
     <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin:40px 0 12px;">&sect; 3 Leistungen</h2>
-    <p style="font-size:15px;color:var(--txt);line-height:1.8;"><em style="font-style:italic;color:var(--c);">S</em>ensibilis erbringt Beratungs-, Schulungs- und Begleitungsleistungen im Bereich KI und Digitalisierung sowie die Bereitstellung von Software-Tools (u.&thinsp;a. KI Pass, Content Planer). Der genaue Leistungsumfang ergibt sich aus dem jeweiligen Angebot oder der Auftragsbestätigung. Die bereitgestellten Tools und Inhalte ersetzen keine Rechts-, Steuer- oder sonstige Fachberatung.</p>
+    <p style="font-size:15px;color:var(--txt);line-height:1.8;"><em class="brand-s">S</em>ensibilis erbringt Beratungs-, Schulungs- und Begleitungsleistungen im Bereich KI und Digitalisierung sowie die Bereitstellung von Software-Tools (u.&thinsp;a. KI Pass, Content Planer). Der genaue Leistungsumfang ergibt sich aus dem jeweiligen Angebot oder der Auftragsbestätigung. Die bereitgestellten Tools und Inhalte ersetzen keine Rechts-, Steuer- oder sonstige Fachberatung.</p>
 
     <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:22px;color:var(--n);margin:40px 0 12px;">&sect; 4 Preise und Zahlung</h2>
     <p style="font-size:15px;color:var(--txt);line-height:1.8;">Es gelten die zum Zeitpunkt des Vertragsschlusses vereinbarten Preise. Alle Preise verstehen sich inklusive der gesetzlichen Umsatzsteuer, sofern nicht anders angegeben. Software-Tools werden als Einmalzahlung erworben (KI Pass derzeit 59 &euro;, Content Planer 490 &euro; einmalig zzgl. 129 &euro;/Jahr Hosting ab dem zweiten Jahr). Beratungsleistungen werden nach Aufwand oder zum vereinbarten Festpreis berechnet. Rechnungen sind innerhalb von 14 Tagen nach Erhalt ohne Abzug zu begleichen.</p>
@@ -3466,7 +3472,7 @@ rd();step(1);
   <footer class="footer-mini">
     <div class="footer-mini-inner">
       <div>
-        <div class="footer-mini-brand"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div>
+        <div class="footer-mini-brand"><em class="brand-s">S</em>ensibilis &mdash; Annett Mende</div>
         <div class="footer-mini-contact">Tel. <a href="tel:+495824965365" style="color:rgba(243,237,227,.6);">05824 965365</a> &nbsp;&middot;&nbsp; <a href="mailto:amen1@t-online.de" style="color:rgba(243,237,227,.6);">amen1@t-online.de</a></div>
       </div>
       <div class="footer-mini-legal">
@@ -3475,7 +3481,7 @@ rd();step(1);
         <a href="#" onclick="nav('datenschutz')">Datenschutz</a>
         <span class="footer-mini-sep">&nbsp;|&nbsp;</span>
         <a href="#" onclick="nav('agb')">AGB</a><span class="footer-mini-sep">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')">Glossar</a>
-        <span class="footer-mini-copy">&#xA9; 2026 <em style="font-style:italic;color:var(--c);">S</em>ensibilis</span>
+        <span class="footer-mini-copy">&#xA9; 2026 <em class="brand-s">S</em>ensibilis</span>
       </div>
     </div>
   </footer>
@@ -3499,7 +3505,7 @@ rd();step(1);
 <div id="chat-widget">
   <div id="chat-window" style="display:none;">
     <div class="chat-header">
-      <span><em style="font-style:italic;color:var(--c);">S</em>ensibilis Assistent</span>
+      <span><em class="brand-s">S</em>ensibilis Assistent</span>
       <button onclick="document.getElementById('chat-window').style.display='none'">&#x2715;</button>
     </div>
     <div id="chat-msgs" class="chat-msgs">
