@@ -3279,11 +3279,19 @@ rd();step(1);
 </div>
 
 <!-- ══ FIXED ELEMENTS ════════════════════════════════════════ -->
-<div id="juli-stempel" onclick="nav('kipass')">
+<div id="juli-stempel" onclick="nav('kipass')" style="display:none;">
   <div class="js-label">JULI-SPECIAL</div>
   <div class="js-main"><em>KI Pass</em><br>Juli</div>
   <div class="js-free">nur 39,&minus;&thinsp;&euro;</div>
 </div>
+<script>
+(function(){
+  var aktiveMonat=[7]; /* Monatszahlen: 7=Juli, 8=August usw. */
+  if(aktiveMonat.indexOf(new Date().getMonth()+1)!==-1){
+    document.getElementById('juli-stempel').style.display='flex';
+  }
+})();
+</script>
 
 <div id="chat-widget">
   <div id="chat-window" style="display:none;">
