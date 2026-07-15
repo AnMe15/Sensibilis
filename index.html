@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>KI-Einf&uuml;hrung f&uuml;r kleine Betriebe | EU AI Act &amp; DSGVO | Sensibilis</title>
+<title>KI-Einführung für kleine Betriebe | EU AI Act & DSGVO | Sensibilis</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <!-- ══ SEO Meta Tags ══════════════════════════════════════════ -->
@@ -58,12 +58,19 @@
           {
             "@type": "Offer",
             "name": "KI Pass",
-            "description": "Dokumentations- und Selbstcheck-Tool für EU AI Act und DSGVO-konforme KI-Erfassung im Unternehmen. Exportfertig, in Minuten ausgefüllt."
+            "description": "Dokumentations- und Selbstcheck-Tool für EU AI Act und DSGVO-konforme KI-Erfassung im Unternehmen. Exportfertig, in Minuten ausgefüllt.",
+            "price": "39.00",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
           },
           {
             "@type": "Offer",
             "name": "KI-Beratung",
-            "description": "Persönliche KI-Einführungsberatung für kleine und mittlere Unternehmen — ohne IT-Abteilung, Schritt für Schritt, abgestimmt auf Branche und Team."
+            "description": "Persönliche KI-Einführungsberatung für kleine und mittlere Unternehmen — ohne IT-Abteilung, Schritt für Schritt, abgestimmt auf Branche und Team.",
+            "price": "0.00",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "description": "Erstgespräch ohne Berechnung."
           },
           {
             "@type": "Offer",
@@ -136,7 +143,7 @@
       "@type": "BlogPosting",
       "@id": "https://anme15.github.io/Sensibilis-Ki/sensibilis.html#blog-eu-ai-act",
       "headline": "Was der EU AI Act für kleine Unternehmen bedeutet",
-      "description": "Seit August 2024 gilt der EU AI Act. Was das für Betriebe bedeutet, die ChatGPT, Copilot oder ähnliche Tools nutzen — und was jetzt konkret zu tun ist.",
+      "description": "Der EU AI Act ist seit 2024 in Kraft — jetzt greifen die strengen Fristen. Was das für Betriebe bedeutet, die ChatGPT, Copilot oder ähnliche Tools nutzen, und was jetzt konkret zu tun ist.",
       "datePublished": "2026-07-01",
       "author": {"@type": "Person", "name": "Annett Mende"},
       "publisher": {"@type": "Organization", "name": "Sensibilis"}
@@ -809,7 +816,7 @@ footer{background:var(--ink);padding:56px 48px 32px;}
     <li><a href="#" onclick="nav('kontakt')" class="nav-btn">Kontakt &#x2192;</a></li>
     <li><a href="tel:+495824965365" class="nav-phone">&#9990; 05824&thinsp;965365</a></li>
   </ul>
-  <button class="ham" id="ham-btn">&#9776;</button>
+  <button class="ham" id="ham-btn" type="button" aria-label="Menü öffnen" aria-expanded="false">&#9776;</button>
 </nav>
 <div id="mob-menu">
   <button onclick="closeMob()">&#x2715;</button>
@@ -1783,7 +1790,13 @@ window.cpdStart=function(){
       </div>
 
       <!-- ── KI Pass Live-Vorschau ─────────────────────────── -->
-      <div id="kp-demo" style="display:none;margin-top:36px;border:1px solid rgba(184,146,74,.35);border-radius:6px;overflow:hidden;">
+      <div id="kp-demo" style="display:none;margin-top:40px;">
+      <div style="border-top:2px solid rgba(184,146,74,.4);padding-top:28px;margin-bottom:20px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:6px;">Vorschau — KI Pass</div>
+        <div style="font-size:18px;font-weight:700;color:var(--n);margin-bottom:6px;">So läuft der echte KI Pass ab</div>
+        <div style="font-size:13px;color:var(--txt2);line-height:1.6;">Die Animation zeigt den tatsächlichen Ablauf — Ihre Daten bleiben bei Ihnen. Kein Mockup.</div>
+      </div>
+      <div style="border:1px solid rgba(184,146,74,.35);border-radius:6px;overflow:hidden;">
         <div style="background:var(--n);padding:14px 20px;display:flex;gap:8px;align-items:center;">
           <div id="kp-tab-0" style="font-size:11px;font-weight:700;letter-spacing:.08em;padding:5px 14px;border-radius:2px;background:var(--g);color:var(--n);cursor:pointer;" onclick="kpScene(0)">1 · Erfassung</div>
           <div id="kp-tab-1" style="font-size:11px;font-weight:700;letter-spacing:.08em;padding:5px 14px;border-radius:2px;background:rgba(184,146,74,.15);color:rgba(243,237,227,.5);cursor:pointer;" onclick="kpScene(1)">2 · Pr&uuml;fung</div>
@@ -1815,22 +1828,73 @@ window.cpdStart=function(){
           </div>
 
           <div id="kp-scene-2" style="display:none;">
-            <div style="font-size:11px;color:rgba(184,146,74,.8);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;">Ihr Ergebnis</div>
-            <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:20px;">
-              <div id="kp-res-circle" style="width:68px;height:68px;min-width:68px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;opacity:0;transition:opacity .6s;">
-                <span id="kp-res-num" style="font-family:Georgia,serif;font-size:24px;font-weight:700;line-height:1;"></span>
-                <span style="font-size:9px;letter-spacing:.05em;text-transform:uppercase;margin-top:2px;">Klasse</span>
+            <!-- Label-Badge -->
+            <div style="display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#B8924A;background:rgba(184,146,74,.12);border:1px solid rgba(184,146,74,.3);border-radius:100px;padding:5px 12px;margin-bottom:14px;">&#128065;&nbsp;So sieht Ihr Ergebnis aus (Auszug)</div>
+
+            <!-- Haupt-Ring + Titel -->
+            <div id="kp-res-header" style="display:flex;align-items:center;gap:16px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.08);opacity:0;transition:opacity .5s;">
+              <div id="kp-res-ring" style="width:72px;height:72px;min-width:72px;border-radius:50%;background:conic-gradient(#B8924A 0%,rgba(184,146,74,.15) 0%);display:flex;align-items:center;justify-content:center;position:relative;transition:background .8s ease;">
+                <div style="position:absolute;inset:7px;background:var(--n);border-radius:50%;"></div>
+                <span id="kp-score-pct" style="position:relative;font-size:15px;font-weight:700;color:var(--iv);"></span>
               </div>
-              <div style="padding-top:4px;">
-                <div id="kp-res-title" style="font-size:15px;font-weight:700;color:var(--iv);margin-bottom:5px;opacity:0;transition:opacity .6s .2s;"></div>
-                <div id="kp-res-desc" style="font-size:13px;color:rgba(243,237,227,.65);line-height:1.65;opacity:0;transition:opacity .6s .4s;"></div>
+              <div>
+                <div id="kp-res-title" style="font-size:14px;font-weight:700;color:var(--iv);margin-bottom:3px;"></div>
+                <div id="kp-res-desc" style="font-size:12px;color:rgba(243,237,227,.55);line-height:1.5;"></div>
               </div>
             </div>
-            <div id="kp-res-doc" style="background:rgba(184,146,74,.08);border:1px solid rgba(184,146,74,.25);border-radius:4px;padding:14px 16px;opacity:0;transition:opacity .6s .6s;">
-              <div style="font-size:12px;font-weight:700;color:var(--g);margin-bottom:8px;">Exportfertige Dokumente</div>
-              <div style="font-size:12px;color:rgba(243,237,227,.6);">&#x2713;&nbsp; Verarbeitungsverzeichnis (Art. 30 DSGVO)</div>
-              <div style="font-size:12px;color:rgba(243,237,227,.6);margin-top:4px;">&#x2713;&nbsp; EU AI Act Einstufungsdokument</div>
-              <div style="font-size:12px;color:rgba(243,237,227,.6);margin-top:4px;">&#x2713;&nbsp; PDF-Export &mdash; prüfungsbereit</div>
+
+            <!-- 3 Sub-Ringe -->
+            <div id="kp-res-subs" style="display:flex;gap:10px;justify-content:space-between;margin-bottom:14px;opacity:0;transition:opacity .5s .25s;">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:5px;flex:1;text-align:center;">
+                <div style="width:42px;height:42px;border-radius:50%;background:conic-gradient(#B8924A 58%,rgba(184,146,74,.15) 0%);display:flex;align-items:center;justify-content:center;position:relative;">
+                  <div style="position:absolute;inset:5px;background:var(--n);border-radius:50%;"></div>
+                  <span style="position:relative;font-size:10px;font-weight:700;color:var(--iv);">58%</span>
+                </div>
+                <span style="font-size:10px;color:rgba(243,237,227,.5);line-height:1.3;">Datenschutz</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:5px;flex:1;text-align:center;">
+                <div style="width:42px;height:42px;border-radius:50%;background:conic-gradient(#4caf50 81%,rgba(76,175,80,.15) 0%);display:flex;align-items:center;justify-content:center;position:relative;">
+                  <div style="position:absolute;inset:5px;background:var(--n);border-radius:50%;"></div>
+                  <span style="position:relative;font-size:10px;font-weight:700;color:var(--iv);">81%</span>
+                </div>
+                <span style="font-size:10px;color:rgba(243,237,227,.5);line-height:1.3;">Tool-Auswahl</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:5px;flex:1;text-align:center;">
+                <div style="width:42px;height:42px;border-radius:50%;background:conic-gradient(#B8924A 50%,rgba(184,146,74,.15) 0%);display:flex;align-items:center;justify-content:center;position:relative;">
+                  <div style="position:absolute;inset:5px;background:var(--n);border-radius:50%;"></div>
+                  <span style="position:relative;font-size:10px;font-weight:700;color:var(--iv);">50%</span>
+                </div>
+                <span style="font-size:10px;color:rgba(243,237,227,.5);line-height:1.3;">Betrieb</span>
+              </div>
+            </div>
+
+            <!-- Was gut läuft -->
+            <div id="kp-res-good" style="display:flex;gap:9px;align-items:flex-start;background:rgba(76,175,80,.08);border-radius:8px;padding:10px 12px;margin-bottom:8px;font-size:12px;color:rgba(150,220,160,.9);line-height:1.5;opacity:0;transition:opacity .5s .45s;">
+              <span style="flex-shrink:0;margin-top:1px;">&#x2713;</span>
+              <span>Tool-Auswahl: ChatGPT wurde nach den Risikoklassen des EU AI Act eingestuft.</span>
+            </div>
+
+            <!-- Noch offen -->
+            <div id="kp-res-open" style="display:flex;gap:9px;align-items:flex-start;background:rgba(184,146,74,.1);border:1px solid rgba(184,146,74,.3);border-radius:8px;padding:10px 12px;margin-bottom:12px;font-size:12px;color:rgba(220,185,100,.85);line-height:1.5;opacity:0;transition:opacity .5s .65s;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:1px;color:#B8924A;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span><strong style="color:#B8924A;">Noch offen:</strong> Datenflusskarte &mdash; muss noch ausgef&uuml;llt und gespeichert werden.</span>
+            </div>
+
+            <!-- Fahrplan -->
+            <div id="kp-res-plan" style="opacity:0;transition:opacity .5s .85s;">
+              <div style="font-size:11px;font-weight:700;color:rgba(184,146,74,.8);margin-bottom:7px;">Fahrplan &mdash; n&auml;chste Schritte</div>
+              <div style="display:flex;gap:9px;align-items:flex-start;background:rgba(184,146,74,.08);border-left:3px solid #B8924A;border-radius:0 6px 6px 0;padding:9px 12px;margin-bottom:7px;font-size:12px;color:rgba(220,185,100,.8);line-height:1.5;">
+                <span style="font-size:10px;font-weight:700;color:#B8924A;flex-shrink:0;">1</span>
+                <span>AVV beim Anbieter anfordern und vor dem Einsatz unterschreiben lassen.</span>
+              </div>
+              <div style="display:flex;gap:9px;align-items:flex-start;background:rgba(184,146,74,.08);border-left:3px solid #B8924A;border-radius:0 6px 6px 0;padding:9px 12px;margin-bottom:12px;font-size:12px;color:rgba(220,185,100,.8);line-height:1.5;">
+                <span style="font-size:10px;font-weight:700;color:#B8924A;flex-shrink:0;">2</span>
+                <span>Daten-Training deaktivieren (Einstellungen &rarr; Datenschutz &rarr; Modelltraining).</span>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:rgba(243,237,227,.6);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:6px 12px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>PDF exportieren</span>
+                <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:rgba(243,237,227,.6);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:6px 12px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>Prüfung speichern</span>
+              </div>
             </div>
           </div>
 
@@ -1839,6 +1903,7 @@ window.cpdStart=function(){
           <div style="font-size:12px;color:rgba(243,237,227,.45);">Das ist der echte KI Pass &mdash; kein Mockup.</div>
           <button class="btn btn-red" onclick="nav('kontakt')" style="padding:10px 22px;">KI Pass anfragen &rarr;</button>
         </div>
+      </div>
       </div>
 
     </div>
@@ -1903,7 +1968,7 @@ window.sc2Los=function(){
   }
   step('res');
 };
-window.sc2Reset=function(){st={d:[],e:null,b:null};rd();step(1);};
+window.sc2Reset=function(){st={d:[],e:null,b:null};rd();step(1);var kd=document.getElementById('kp-demo');if(kd)kd.style.display='none';};
 rd();step(1);
 })();
     </script>
@@ -2203,7 +2268,7 @@ rd();step(1);
         <div style="padding:28px;flex:1;display:flex;flex-direction:column;">
           <div style="font-size:12px;color:var(--txt2);margin-bottom:10px;">Juli 2026 &nbsp;&middot;&nbsp; 5 Min. Lesezeit</div>
           <h3 style="font-family:Georgia,serif;font-weight:normal;font-size:20px;color:var(--txt);line-height:1.3;margin:0 0 12px;">Was der EU AI Act f&uuml;r kleine Unternehmen bedeutet</h3>
-          <p style="font-size:14px;color:var(--txt2);line-height:1.7;margin:0 0 20px;flex:1;">Seit August 2024 gilt der EU AI Act. Was das f&uuml;r Betriebe bedeutet, die ChatGPT, Copilot oder &auml;hnliche Tools nutzen &mdash; und was jetzt konkret zu tun ist.</p>
+          <p style="font-size:14px;color:var(--txt2);line-height:1.7;margin:0 0 20px;flex:1;">Der EU AI Act ist seit 2024 in Kraft &mdash; jetzt greifen die strengen Fristen. Was das f&uuml;r Betriebe bedeutet, die ChatGPT, Copilot oder &auml;hnliche Tools nutzen, und was jetzt konkret zu tun ist.</p>
           <div style="font-size:13px;font-weight:700;color:var(--c);">Weiterlesen &rarr;</div>
         </div>
       </article>
@@ -2287,7 +2352,7 @@ rd();step(1);
   </div>
   <div class="content-block">
     <div style="max-width:760px;margin:0 auto;">
-      <p style="font-size:16px;color:var(--txt2);line-height:1.8;margin-bottom:32px;font-style:italic;border-left:3px solid var(--g);padding-left:20px;">Seit August 2024 gilt der EU AI Act europaweit. Wer heute ChatGPT, Copilot oder andere KI-Tools im Betrieb einsetzt, ist bereits betroffen &mdash; ob er will oder nicht.</p>
+      <p style="font-size:16px;color:var(--txt2);line-height:1.8;margin-bottom:32px;font-style:italic;border-left:3px solid var(--g);padding-left:20px;">Der EU AI Act gilt seit 2024 europaweit &mdash; und 2026 greifen die strengen Umsetzungsfristen. Wer heute ChatGPT, Copilot oder andere KI-Tools im Betrieb einsetzt, ist l&auml;ngst betroffen und muss jetzt handeln.</p>
 
       <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Was ist der EU AI Act?</h2>
       <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Der EU AI Act ist die weltweit erste verbindliche KI-Regulierung &mdash; verabschiedet im August 2024, schrittweise in Kraft tretend bis 2027. Ziel ist es, den Einsatz k&uuml;nstlicher Intelligenz in der EU sicher, transparent und nachvollziehbar zu machen. Er teilt KI-Systeme in vier Risikoklassen ein: unannehmbares Risiko, Hochrisiko, begrenztes Risiko und minimales Risiko.</p>
@@ -3387,6 +3452,7 @@ function nav(id){
   var pg=document.getElementById('page-'+id);
   if(pg)pg.classList.add('active');
   if(id==='checkliste')chkReset();
+  if(id==='kipass'){var kd=document.getElementById('kp-demo');if(kd)kd.style.display='none';}
   document.querySelectorAll('.nav-links a[data-page]').forEach(function(a){
     a.classList.toggle('active', a.dataset.page===id);
   });
@@ -3398,8 +3464,10 @@ function nav(id){
     if(dm)dm.setAttribute('content',m.d);
   }
 }
-document.getElementById('ham-btn').addEventListener('click',()=>{
-  document.getElementById('mob-menu').classList.toggle('open');
+document.getElementById('ham-btn').addEventListener('click',function(){
+  const open=document.getElementById('mob-menu').classList.toggle('open');
+  this.setAttribute('aria-expanded',open);
+  this.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
 });
 function closeMob(){document.getElementById('mob-menu').classList.remove('open');}
 window.addEventListener('DOMContentLoaded',function(){
@@ -3411,6 +3479,7 @@ window.addEventListener('DOMContentLoaded',function(){
 (function(){
   const c=document.getElementById('hero-canvas');
   if(!c)return;
+  if(window.innerWidth<768||window.matchMedia('(prefers-reduced-motion:reduce)').matches){c.style.display='none';return;}
   const ctx=c.getContext('2d');
   const hero=c.closest('section')||c.parentElement;
   let W,H,pts=[];
@@ -3557,15 +3626,26 @@ function kpDemoStart(){
           });
           setTimeout(function(){
             kpScene(2);
-            document.getElementById('kp-res-circle').style.background=k.c;
-            document.getElementById('kp-res-num').textContent=kl;
+            var scores={1:92,2:80,3:63,4:44,5:28};
+            var pct=scores[kl]||63;
             document.getElementById('kp-res-title').textContent=k.t;
             document.getElementById('kp-res-desc').textContent=k.d;
+            document.getElementById('kp-score-pct').textContent=pct+'%';
+            /* conic-gradient Ring animieren */
+            var ring=document.getElementById('kp-res-ring');
+            ring.style.background='conic-gradient('+k.c+' 0%,rgba(184,146,74,.15) 0%)';
             setTimeout(function(){
-              document.getElementById('kp-res-circle').style.opacity='1';
-              document.getElementById('kp-res-title').style.opacity='1';
-              document.getElementById('kp-res-desc').style.opacity='1';
-              setTimeout(function(){document.getElementById('kp-res-doc').style.opacity='1';},400);
+              document.getElementById('kp-res-header').style.opacity='1';
+              var cur=0;var target=pct;
+              var step=setInterval(function(){
+                cur+=2;if(cur>target)cur=target;
+                ring.style.background='conic-gradient('+k.c+' '+cur+'%,rgba(184,146,74,.15) 0%)';
+                if(cur>=target)clearInterval(step);
+              },20);
+              setTimeout(function(){document.getElementById('kp-res-subs').style.opacity='1';},400);
+              setTimeout(function(){document.getElementById('kp-res-good').style.opacity='1';},700);
+              setTimeout(function(){document.getElementById('kp-res-open').style.opacity='1';},950);
+              setTimeout(function(){document.getElementById('kp-res-plan').style.opacity='1';},1200);
             },200);
           },checks.length*600+800);
         },600);
