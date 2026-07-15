@@ -3228,6 +3228,10 @@ document.getElementById('ham-btn').addEventListener('click',()=>{
   document.getElementById('mob-menu').classList.toggle('open');
 });
 function closeMob(){document.getElementById('mob-menu').classList.remove('open');}
+window.addEventListener('DOMContentLoaded',function(){
+  var h=window.location.hash.replace('#','');
+  if(h)nav(h);
+});
 
 /* ── CANVAS PARTIKEL ───────────────────────────────────── */
 (function(){

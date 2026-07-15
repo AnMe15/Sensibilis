@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>KI einfuhren ohne IT-Abteilung - Sensibilis</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="KI-Einfuhrung ohne eigene IT ist moglich - mit dem richtigen Einstieg, klaren Zielen und schrittweiser Umsetzung.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://anme15.github.io/Sensibilis-Ki/blog-5.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://anme15.github.io/Sensibilis-Ki/blog-5.html">
+<meta property="og:title" content="KI einfuhren ohne IT-Abteilung - Sensibilis">
+<meta property="og:description" content="KI-Einfuhrung ohne eigene IT ist moglich - mit dem richtigen Einstieg, klaren Zielen und schrittweiser Umsetzung.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Sensibilis">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"KI einfuhren ohne IT-Abteilung","datePublished":"2026-07-15","author":{"@type":"Person","name":"Annett Mende"},"publisher":{"@type":"Organization","name":"Sensibilis"}}
+</script>
+<style>
+/* ══ TOKENS ══════════════════════════════════════════════════ */
+:root{
+  --c:#8C1A2A; --c-d:#6B1220;
+  --n:#0D1C3F; --n-d:#070F28;
+  --g:#B8924A; --g-l:#D4AB68;
+  --iv:#F3EDE3; --iv-d:#E8DFD0;
+  --ink:#160A0D;
+  --bg:var(--iv); --bg2:#fff;
+  --txt:#1A0D10; --txt2:#4A3A3E;
+  --bdr:#DDD3C5; --card:#fff;
+  --nav-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--iv);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+button{cursor:pointer;font-family:inherit;}
+
+
+/* ══ NAV ══════════════════════════════════════════════════════ */
+nav{
+  position:sticky;top:0;z-index:150;
+  background:var(--n);backdrop-filter:blur(16px);
+  border-bottom:3px solid rgba(184,146,74,.55);
+  height:var(--nav-h);padding:0 40px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.nav-brand{
+  background:var(--iv);border-radius:3px;padding:7px 14px 7px 10px;
+  display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;
+  transition:opacity .2s;
+}
+.nav-brand:hover{opacity:1;}
+.nav-wordmark{font-family:Georgia,serif;font-size:20px;color:var(--n);font-weight:normal;letter-spacing:.02em;line-height:1;}
+.nav-wordmark em{font-style:italic;color:var(--c);font-size:25px;vertical-align:-.06em;margin-right:1px;}
+.nav-links{display:flex;list-style:none;gap:2px;align-items:center;}
+.nav-links a{
+  font-size:13px;letter-spacing:.04em;color:rgba(243,237,227,.85);font-weight:500;
+  padding:6px 11px;border-radius:2px;transition:color .2s,background .2s;white-space:nowrap;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--iv);background:rgba(255,255,255,.07);}
+.nav-btn{
+  background:var(--c) !important;color:var(--iv) !important;
+  padding:8px 18px !important;font-weight:600;letter-spacing:.08em !important;
+}
+.nav-phone{font-size:13px;font-weight:600;color:rgba(243,237,227,.85);white-space:nowrap;letter-spacing:.01em;}
+.nav-phone:hover{color:var(--g)!important;}
+.nav-btn:hover{background:var(--c-d) !important;}
+
+/* ══ NAV DROPDOWN ════════════════════════════════════════════ */
+.nav-drop{position:relative;}
+.nav-drop-btn{background:none;border:none;font-size:13px;letter-spacing:.04em;font-weight:500;
+  color:rgba(243,237,227,.85);padding:6px 11px;border-radius:2px;cursor:pointer;
+  display:flex;align-items:center;gap:4px;font-family:inherit;white-space:nowrap;
+  transition:color .2s,background .2s;}
+.nav-drop-btn::after{content:'▾';font-size:9px;opacity:.55;}
+.nav-drop-btn:hover,.nav-drop.open .nav-drop-btn{color:var(--iv);background:rgba(255,255,255,.07);}
+.drop-menu{
+  display:none;position:absolute;top:calc(100% + 4px);left:50%;transform:translateX(-50%);
+  background:var(--n-d);border:1px solid rgba(184,146,74,.14);
+  border-radius:2px;min-width:210px;z-index:300;overflow:hidden;
+  box-shadow:0 8px 32px rgba(0,0,0,.4);
+}
+.nav-drop:hover .drop-menu{display:block;}
+.drop-menu a{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 16px;font-size:12px;letter-spacing:.04em;
+  color:rgba(243,237,227,.6);border-bottom:1px solid rgba(255,255,255,.04);
+  transition:background .15s,color .15s;
+}
+.drop-menu a:last-child{border-bottom:none;}
+.drop-menu a:hover{background:rgba(255,255,255,.06);color:var(--iv);}
+.drop-soon{font-size:9px;letter-spacing:.12em;color:var(--g);opacity:.55;text-transform:uppercase;padding:2px 6px;border:1px solid rgba(184,146,74,.25);border-radius:1px;}
+.zwei-saeulen{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:900px){.zwei-saeulen{grid-template-columns:1fr;}}
+.ham{display:none;background:none;border:none;color:var(--iv);font-size:22px;padding:8px;}
+#mob-menu{
+  display:none;position:fixed;inset:var(--nav-h) 0 0 0;
+  background:var(--n-d);z-index:140;flex-direction:column;
+  padding:28px 32px;gap:0;overflow-y:auto;
+}
+#mob-menu.open{display:flex;}
+#mob-menu a{
+  color:rgba(243,237,227,.75);font-size:17px;
+  padding:14px 0;border-bottom:1px solid rgba(243,237,227,.07);
+}
+
+/* ══ PAGE ROUTER ═════════════════════════════════════════════ */
+.page{position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;pointer-events:none;}
+.page.active{position:static;left:auto;top:auto;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal;pointer-events:auto;}
+
+/* ══ HEADER BILD BEREICHE ════════════════════════════════════ */
+.page-header{
+  position:relative;min-height:280px;
+  display:flex;align-items:flex-end;overflow:hidden;
+}
+.page-header-bg{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+}
+.page-header-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,28,63,.92) 0%,rgba(13,28,63,.55) 50%,rgba(13,28,63,.25) 100%);
+}
+.page-header-content{
+  position:relative;z-index:2;padding:36px 48px 40px;width:100%;max-width:1100px;margin:0 auto;
+}
+.page-header-eyebrow{
+  font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--g);margin-bottom:14px;
+}
+.page-header h1{
+  font-family:Georgia,serif;font-weight:normal;
+  font-size:clamp(36px,6vw,72px);line-height:1.05;
+  letter-spacing:-.03em;color:var(--iv);margin-bottom:14px;text-wrap:balance;
+}
+.page-header h1 em{font-style:italic;color:var(--g);}
+.page-header p{
+  font-size:17px;color:rgba(243,237,227,.65);max-width:560px;line-height:1.65;
+}
+
+/* ══ HOMEPAGE HERO ═══════════════════════════════════════════ */
+.hero{
+  position:relative;min-height:90vh;display:flex;align-items:center;
+  background:var(--n);overflow:hidden;
+}
+#hero-canvas{position:absolute;inset:0;opacity:1;-webkit-mask-image:linear-gradient(to right,transparent 0%,transparent 42%,black 62%);mask-image:linear-gradient(to right,transparent 0%,transparent 42%,black 62%);}
+.hero-grad{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 65% 70% at 80% 45%,rgba(140,26,42,.22) 0%,transparent 60%),
+    radial-gradient(ellipse 40% 60% at 5% 85%,rgba(184,146,74,.07) 0%,transparent 55%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;padding:80px 48px;max-width:1100px;margin:0 auto;width:100%;}
+.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
+.hero-line{width:36px;height:1px;background:var(--g);}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--g);}
+.hero h1{
+  font-family:Georgia,serif;font-weight:normal;
+  font-size:clamp(48px,9vw,112px);line-height:.93;
+  letter-spacing:-.04em;color:var(--iv);margin-bottom:10px;
+}
+.hero h1 em{font-style:italic;color:var(--g);}
+.hero-tag{
+  font-family:Georgia,serif;font-size:clamp(20px,2.2vw,28px);
+  color:rgba(243,237,227,.58);font-style:italic;margin-bottom:32px;
+}
+.hero-body{
+  font-size:18px;color:rgba(243,237,227,.8);max-width:540px;
+  line-height:1.7;margin-bottom:44px;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 32px;font-size:13px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;border-radius:2px;
+  border:none;transition:transform .15s,background .2s;cursor:pointer;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-red{background:var(--c);color:var(--iv);}
+.btn-red:hover{background:var(--c-d);}
+.btn-out{background:transparent;color:rgba(243,237,227,.9);
+  border:1px solid rgba(243,237,227,.5);font-size:13px;padding:13px 28px;font-weight:500;}
+.btn-out:hover{border-color:var(--g);color:var(--g);background:rgba(184,146,74,.06);}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.hero-trust{
+  margin-top:60px;padding-top:32px;border-top:1px solid rgba(243,237,227,.08);
+  display:flex;gap:36px;flex-wrap:wrap;
+}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;
+  color:rgba(243,237,227,.72);letter-spacing:.04em;}
+.trust-icon{color:var(--g);}
+
+/* ══ SERVICE CARDS HOMEPAGE ══════════════════════════════════ */
+.sec{padding:80px 48px;}
+.sec-inner{max-width:1100px;margin:0 auto;}
+.sec-hd{margin-bottom:52px;}
+.sec-hd .eyebrow{margin-bottom:12px;}
+.sec-hd h2{
+  font-family:Georgia,serif;font-weight:normal;
+  font-size:clamp(28px,4vw,52px);color:var(--txt);
+  letter-spacing:-.025em;line-height:1.1;margin-bottom:14px;
+}
+.sec-hd p{font-size:16px;color:var(--txt);max-width:560px;line-height:1.7;opacity:.75;}
+
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.service-card{
+  position:relative;overflow:hidden;cursor:pointer;
+  min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;
+  transition:transform .2s;
+}
+.service-card:hover{transform:translateY(-4px);}
+.sc-bg{position:absolute;inset:0;background-size:cover;background-position:center;}
+.sc-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(7,15,40,.9) 0%,rgba(7,15,40,.4) 60%,transparent 100%);
+  transition:background .3s;
+}
+.service-card:hover .sc-overlay{
+  background:linear-gradient(to top,rgba(140,26,42,.88) 0%,rgba(140,26,42,.4) 60%,transparent 100%);
+}
+.sc-content{position:relative;z-index:2;padding:28px 24px;}
+.sc-tag{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--g);margin-bottom:8px;}
+.sc-title{font-family:Georgia,serif;font-size:22px;font-weight:normal;
+  color:var(--iv);margin-bottom:8px;line-height:1.2;}
+.sc-desc{font-size:14px;color:rgba(243,237,227,.75);line-height:1.6;}
+.sc-arrow{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--g);margin-top:14px;font-weight:600;
+}
+
+/* ══ BILD-BILD-TEXT BLOCK ═════════════════════════════════════ */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.split-img{position:relative;min-height:460px;overflow:hidden;}
+.split-img-bg{position:absolute;inset:0;background-size:cover;background-position:center;}
+.split-img-overlay{position:absolute;inset:0;}
+.split-text{padding:72px 60px;display:flex;flex-direction:column;justify-content:center;}
+.split-text .eyebrow{margin-bottom:14px;}
+.split-text h2{font-family:Georgia,serif;font-weight:normal;
+  font-size:clamp(26px,3.5vw,44px);color:var(--txt);letter-spacing:-.025em;
+  line-height:1.1;margin-bottom:18px;}
+.split-text h2 em{font-style:italic;color:var(--c);}
+.split-text p{font-size:16px;color:var(--txt);line-height:1.7;margin-bottom:28px;opacity:.8;}
+
+/* ══ AKTIONSBANNER ═══════════════════════════════════════════ */
+.offer-banner{
+  background:linear-gradient(110deg,var(--c) 0%,#6B1220 50%,#3D0910 100%);
+  padding:64px 48px;
+  display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;
+}
+.offer-left h2{
+  font-family:Georgia,serif;font-weight:normal;
+  font-size:clamp(26px,4vw,48px);color:var(--iv);
+  letter-spacing:-.025em;margin-bottom:10px;line-height:1.1;
+}
+.offer-left h2 em{font-style:italic;color:var(--g);}
+.offer-left p{font-size:15px;color:rgba(243,237,227,.6);max-width:480px;line-height:1.6;}
+.offer-right{text-align:center;flex-shrink:0;}
+.offer-price{font-family:Georgia,serif;font-size:80px;color:var(--iv);line-height:1;}
+.offer-price sup{font-size:32px;vertical-align:.5em;}
+.offer-price-old{font-size:13px;color:rgba(243,237,227,.35);
+  text-decoration:line-through;letter-spacing:.04em;}
+.offer-price-note{font-size:11px;color:rgba(243,237,227,.45);letter-spacing:.06em;
+  text-transform:uppercase;margin-top:4px;}
+#countdown{display:flex;gap:16px;margin:16px 0;}
+.cd-block{text-align:center;}
+.cd-num{font-family:Georgia,serif;font-size:36px;color:var(--g);line-height:1;}
+.cd-lbl{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(243,237,227,.35);}
+
+/* ══ TESTIMONIALS ════════════════════════════════════════════ */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.testi-card{
+  background:var(--n);padding:36px 32px;border-radius:6px;
+  border-top:3px solid var(--c);
+  box-shadow:0 4px 20px rgba(13,28,63,.2);
+  transition:box-shadow .25s,transform .25s;
+}
+.testi-card:hover{box-shadow:0 10px 40px rgba(13,28,63,.35);transform:translateY(-3px);}
+.testi-text{
+  font-family:Georgia,serif;font-size:17px;font-style:italic;
+  color:rgba(243,237,227,.8);line-height:1.65;margin-bottom:24px;
+}
+.testi-author{font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--g);}
+.testi-role{font-size:12px;color:rgba(243,237,227,.3);margin-top:3px;}
+
+/* ══ INNER PAGE CONTENT ══════════════════════════════════════ */
+.content-block{max-width:1100px;margin:0 auto;padding:72px 48px;}
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:56px 0;}
+.step-card{
+  background:var(--card);
+  border:1px solid var(--bdr);
+  border-radius:6px;
+  padding:44px 36px;
+  box-shadow:0 2px 16px rgba(22,10,13,.06);
+  transition:box-shadow .25s,transform .25s;
+}
+.step-card:hover{box-shadow:0 8px 40px rgba(22,10,13,.12);transform:translateY(-3px);}
+.step-num{font-family:Georgia,serif;font-size:64px;
+  line-height:1;margin-bottom:20px;letter-spacing:-.02em;}
+.step-card h3{font-family:Georgia,serif;font-weight:normal;font-size:22px;
+  color:var(--txt);margin-bottom:14px;line-height:1.3;}
+.step-card p{font-size:14px;color:var(--txt2);line-height:1.7;}
+
+.use-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:52px;}
+.use-card{
+  display:flex;gap:20px;align-items:flex-start;
+  background:#fff;border:1px solid var(--bdr);border-radius:6px;
+  padding:28px 28px;
+  box-shadow:0 2px 12px rgba(22,10,13,.05);
+  transition:box-shadow .25s,transform .25s;
+}
+.use-card:hover{box-shadow:0 6px 28px rgba(22,10,13,.11);transform:translateY(-2px);}
+.use-icon{width:40px;height:40px;border-radius:8px;background:var(--c);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;}
+.use-card h4{font-size:15px;font-weight:600;color:var(--txt);margin-bottom:6px;}
+.use-card p{font-size:13px;color:var(--txt2);line-height:1.65;}
+
+/* ══ TOOLS / KI PASS ════════════════════════════════════════ */
+.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.tool-card{
+  background:#fff;border:1px solid var(--bdr);border-radius:6px;padding:36px 28px;
+  display:flex;flex-direction:column;
+  box-shadow:0 2px 14px rgba(22,10,13,.05);
+  transition:box-shadow .25s,transform .25s;
+}
+.tool-card:hover{box-shadow:0 8px 36px rgba(22,10,13,.12);transform:translateY(-3px);}
+.tool-tier{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;padding:4px 10px;border-radius:3px;margin-bottom:16px;}
+.t-free{background:rgba(184,146,74,.18);color:#8a6a28;}
+.t-pro{background:rgba(140,26,42,.13);color:var(--c);}
+.t-high{background:rgba(13,28,63,.1);color:var(--n);}
+.tool-card.card-free{border-top:4px solid var(--g);background:linear-gradient(160deg,rgba(184,146,74,.06) 0%,#fff 45%);}
+.tool-card.card-pro{border-top:4px solid var(--c);background:linear-gradient(160deg,rgba(140,26,42,.05) 0%,#fff 45%);}
+.tool-card.card-high{border-top:4px solid var(--n);background:linear-gradient(160deg,rgba(13,28,63,.06) 0%,#fff 45%);}
+.tool-card h3{font-family:Georgia,serif;font-weight:normal;font-size:22px;
+  color:var(--txt);margin-bottom:6px;}
+.tool-sub{font-size:12px;color:var(--txt2);letter-spacing:.03em;margin-bottom:14px;}
+.tool-card>p{font-size:14px;color:var(--txt2);line-height:1.65;margin-bottom:18px;}
+.tool-features{list-style:none;display:flex;flex-direction:column;gap:9px;
+  margin-bottom:28px;flex:1;}
+.tool-features li{font-size:13px;color:var(--txt2);padding-left:16px;position:relative;}
+.tool-features li::before{content:'–';position:absolute;left:0;color:var(--g);}
+.tool-btn{
+  background:var(--n);color:var(--iv);border:none;
+  padding:14px 24px;font-size:13px;font-weight:600;letter-spacing:.09em;
+  text-transform:uppercase;cursor:pointer;border-radius:2px;
+  transition:background .2s;
+}
+.tool-btn:hover{background:var(--c);}
+
+/* ══ PREISE ══════════════════════════════════════════════════ */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.price-card{
+  background:#fff;border:1px solid var(--bdr);border-radius:6px;padding:36px 28px;
+  border-top:4px solid var(--bdr);
+  box-shadow:0 2px 14px rgba(22,10,13,.05);
+  transition:box-shadow .25s,transform .25s;
+}
+.price-card:hover{box-shadow:0 10px 40px rgba(22,10,13,.14);transform:translateY(-4px);}
+.price-card.free{border-top:4px solid var(--g);background:linear-gradient(160deg,rgba(184,146,74,.06) 0%,#fff 45%);}
+.price-card.enterprise{border-top:4px solid var(--n);background:linear-gradient(160deg,rgba(13,28,63,.06) 0%,#fff 45%);}
+.price-card.featured{background:var(--n);border-top:4px solid var(--g);border-color:rgba(184,146,74,.3);box-shadow:0 6px 32px rgba(13,28,63,.25);}
+.price-card.featured:hover{box-shadow:0 14px 50px rgba(13,28,63,.38);transform:translateY(-5px);}
+.price-badge{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--g);margin-bottom:16px;}
+.price-card.free .price-badge{color:#8a6a28;}
+.price-card.enterprise .price-badge{color:var(--n);}
+.price-name{font-family:Georgia,serif;font-weight:normal;font-size:22px;
+  color:var(--txt);margin-bottom:6px;}
+.price-card.featured .price-name{color:var(--iv);}
+.price-desc{font-size:13px;color:var(--txt2);margin-bottom:24px;line-height:1.6;}
+.price-card.featured .price-desc{color:rgba(243,237,227,.5);}
+.price-amount{font-family:Georgia,serif;font-size:56px;color:var(--txt);
+  line-height:1;margin-bottom:4px;}
+.price-card.featured .price-amount{color:var(--iv);}
+.price-amount sup{font-size:22px;vertical-align:.6em;}
+.price-period{font-size:12px;color:var(--txt2);margin-bottom:28px;letter-spacing:.04em;}
+.price-card.featured .price-period{color:rgba(243,237,227,.4);}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+.price-features li{font-size:13px;color:var(--txt2);padding-left:16px;position:relative;}
+.price-card.featured .price-features li{color:rgba(243,237,227,.6);}
+.price-features li::before{content:'✓';position:absolute;left:0;color:var(--g);}
+
+/* ══ KONTAKT ══════════════════════════════════════════════════ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;
+  max-width:1100px;margin:0 auto;padding:72px 48px;}
+.contact-info h2{font-family:Georgia,serif;font-weight:normal;font-size:36px;
+  color:var(--txt);margin-bottom:16px;}
+.contact-info p{font-size:15px;color:var(--txt2);line-height:1.7;margin-bottom:28px;}
+.contact-row{display:flex;align-items:center;gap:12px;font-size:14px;
+  color:var(--txt);margin-bottom:14px;}
+label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--txt2);display:block;margin-bottom:6px;}
+input,textarea,select{
+  width:100%;padding:11px 13px;background:var(--iv-d);
+  border:1px solid var(--bdr);border-radius:2px;font-size:14px;
+  color:var(--txt);font-family:inherit;outline:none;transition:border-color .2s;
+}
+input:focus,textarea:focus,select:focus{border-color:var(--g);}
+textarea{min-height:110px;resize:vertical;}
+.form-group{margin-bottom:16px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-note{font-size:11px;color:var(--txt2);line-height:1.5;margin-bottom:16px;}
+#contact-success{display:none;background:rgba(184,146,74,.1);
+  border:1px solid rgba(184,146,74,.3);padding:14px 18px;
+  border-radius:2px;color:var(--g);font-size:14px;margin-top:12px;}
+
+/* ══ NETZWERK ══════════════════════════════════════════════ */
+.network-bar{
+  background:var(--iv-d);border-top:1px solid var(--bdr);
+  border-bottom:1px solid var(--bdr);padding:40px 48px;
+  display:flex;align-items:center;gap:48px;flex-wrap:wrap;
+}
+.network-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--txt2);white-space:nowrap;}
+.network-badge{
+  background:var(--n);color:rgba(243,237,227,.8);
+  padding:10px 20px;font-size:13px;letter-spacing:.05em;
+  border-radius:2px;white-space:nowrap;
+}
+.network-badge span{color:var(--g);}
+
+/* ══ FOOTER ══════════════════════════════════════════════════ */
+footer{background:var(--ink);padding:56px 48px 32px;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;margin-bottom:40px;padding-bottom:40px;
+  border-bottom:1px solid rgba(243,237,227,.07);}
+.footer-brand-name{font-family:Georgia,serif;font-size:22px;
+  color:rgba(243,237,227,.85);margin-bottom:10px;}
+.footer-brand-name em{font-style:italic;color:var(--c);font-size:27px;vertical-align:-.06em;}
+.footer-desc{font-size:13px;color:rgba(243,237,227,.3);line-height:1.65;}
+.footer-col h4{font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--g);margin-bottom:16px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-col li a{font-size:13px;color:rgba(243,237,227,.35);transition:color .2s;}
+.footer-col li a:hover{color:rgba(243,237,227,.8);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:11px;color:rgba(243,237,227,.18);letter-spacing:.04em;}
+.footer-legal{display:flex;gap:20px;}
+.footer-legal a{font-size:11px;color:rgba(243,237,227,.18);transition:color .2s;}
+.footer-legal a:hover{color:rgba(243,237,227,.45);}
+
+/* ══ CHATBOT ════════════════════════════════════════════════ */
+#chat-widget{position:fixed;bottom:24px;left:24px;z-index:400;}
+#chat-btn{width:60px;height:60px;border-radius:50%;background:var(--c);border:none;
+  box-shadow:0 4px 20px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;
+  font-size:26px;cursor:pointer;transition:transform .2s,background .2s;}
+#chat-btn:hover{transform:scale(1.06);background:var(--c-d);}
+#chat-window{
+  position:absolute;bottom:76px;left:0;
+  width:320px;background:#fff;border-radius:6px;
+  box-shadow:0 8px 40px rgba(0,0,0,.35);
+  display:none;flex-direction:column;overflow:hidden;
+  border:1px solid rgba(0,0,0,.08);
+}
+.chat-header{background:var(--n);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.chat-header span{font-size:14px;color:var(--iv);font-weight:600;}
+.chat-header button{background:none;border:none;color:rgba(243,237,227,.6);font-size:18px;cursor:pointer;padding:0;line-height:1;}
+.chat-header button:hover{color:var(--iv);}
+.chat-msgs{padding:14px;display:flex;flex-direction:column;gap:8px;height:220px;overflow-y:auto;background:#fff;}
+.msg{font-size:13px;line-height:1.5;padding:9px 12px;border-radius:4px;max-width:85%;}
+.msg-bot{background:var(--iv-d);color:var(--txt);align-self:flex-start;}
+.msg-user{background:var(--c);color:var(--iv);align-self:flex-end;}
+.chat-input-row{display:flex;border-top:1px solid #e0d8cc;flex-shrink:0;}
+.chat-input-row input{flex:1;border:none;padding:11px 14px;background:#fff;font-size:13px;outline:none;font-family:inherit;}
+.chat-input-row button{background:var(--c);color:#fff;border:none;padding:0 18px;
+  font-size:16px;cursor:pointer;transition:background .2s;}
+.chat-input-row button:hover{background:var(--c-d);}
+
+/* ══ PHASENMODELL ════════════════════════════════════════════ */
+.phase-strip{
+  background:var(--n);padding:80px 48px;
+}
+.phase-inner{max-width:1100px;margin:0 auto;}
+.phase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative;}
+.phase-grid::before{
+  content:'';position:absolute;top:28px;left:12.5%;right:12.5%;height:1px;
+  background:linear-gradient(90deg,var(--g) 0%,rgba(184,146,74,.2) 100%);
+  pointer-events:none;
+}
+.phase-item{text-align:center;padding:0 16px;}
+.phase-dot{
+  width:56px;height:56px;border-radius:50%;margin:0 auto 18px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:Georgia,serif;font-size:18px;color:var(--iv);
+  position:relative;z-index:2;
+}
+.phase-item:nth-child(1) .phase-dot{background:var(--c);}
+.phase-item:nth-child(2) .phase-dot{background:rgba(140,26,42,.55);border:1px solid var(--c);}
+.phase-item:nth-child(3) .phase-dot{background:rgba(184,146,74,.25);border:1px solid var(--g);}
+.phase-item:nth-child(4) .phase-dot{background:var(--g);color:var(--ink);}
+.phase-item h4{font-family:Georgia,serif;font-weight:normal;font-size:16px;
+  color:var(--iv);margin-bottom:8px;}
+.phase-item p{font-size:12px;color:rgba(243,237,227,.4);line-height:1.55;}
+
+/* ══ FAQ ═════════════════════════════════════════════════════ */
+.faq-list{max-width:760px;margin:48px auto 0;}
+.faq-item{border-bottom:1px solid var(--bdr);}
+.faq-q{
+  width:100%;background:none;border:none;text-align:left;
+  padding:20px 0;display:flex;justify-content:space-between;align-items:center;
+  font-size:16px;color:var(--txt);cursor:pointer;gap:16px;
+  font-family:inherit;font-weight:500;
+}
+.faq-q:hover{color:var(--c);}
+.faq-icon{font-size:20px;color:var(--g);flex-shrink:0;transition:transform .2s;line-height:1;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-a{display:none;padding:0 0 20px;font-size:14px;color:var(--txt2);line-height:1.75;max-width:680px;}
+.faq-item.open .faq-a{display:block;}
+
+/* ══ BLOG ════════════════════════════════════════════════════ */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.blog-card{background:#fff;border:1px solid var(--bdr);border-radius:6px;cursor:pointer;
+  overflow:hidden;box-shadow:0 2px 14px rgba(22,10,13,.06);
+  transition:box-shadow .25s,transform .25s;}
+.blog-card:hover{box-shadow:0 10px 40px rgba(22,10,13,.14);transform:translateY(-4px);}
+.blog-img{height:180px;background-size:cover;background-position:center;}
+.blog-body{padding:24px;}
+.blog-tag{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--g);margin-bottom:8px;}
+.blog-title{font-family:Georgia,serif;font-weight:normal;font-size:19px;
+  color:var(--txt);margin-bottom:8px;line-height:1.25;}
+.blog-excerpt{font-size:13px;color:var(--txt2);line-height:1.6;margin-bottom:14px;}
+.blog-meta{font-size:11px;color:var(--txt2);letter-spacing:.04em;}
+
+/* ══ RESPONSIVE ═════════════════════════════════════════════ */
+@media(max-width:900px){
+  .service-grid{grid-template-columns:1fr 1fr;}
+  .testi-grid{grid-template-columns:1fr;}
+  .split{grid-template-columns:1fr;}
+  .tools-grid{grid-template-columns:1fr;}
+  .pricing-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .offer-banner{grid-template-columns:1fr;}
+  .step-grid{grid-template-columns:1fr;}
+  .use-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;padding:48px 28px;}
+  .form-row{grid-template-columns:1fr;}
+  .phase-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  .phase-grid::before{display:none;}
+  .blog-grid{grid-template-columns:1fr;}
+  nav{padding:0 20px;}
+  .sec{padding:56px 24px;}
+  .hero-inner{padding:56px 24px;}
+  .network-bar{padding:28px 24px;}
+  .phase-strip{padding:56px 24px;}
+  .ham{display:block;}
+  .nav-links{display:none;}
+}
+@media(max-width:600px){
+  .service-grid{grid-template-columns:1fr;}
+  .page-header{min-height:220px;}
+  .page-header-content{padding:36px 24px;}
+  .hero{min-height:80vh;}
+}
+
+/* ══ PAGE NAV LINKS ══════════════════════════════════════════ */
+.page-nav-links{
+  border-top:1px solid var(--bdr);
+  margin-top:72px;padding:36px 0 0;
+  display:flex;gap:32px;flex-wrap:wrap;align-items:center;
+}
+.page-nav-links .pnl-label{
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--txt2);opacity:.55;flex-shrink:0;
+}
+.page-nav-links a{
+  font-size:14px;color:var(--g);font-weight:500;
+  border-bottom:1px solid transparent;
+  transition:border-color .2s,color .2s;
+  white-space:nowrap;
+}
+.page-nav-links a:hover{border-color:var(--g);}
+
+
+
+/* ══ JULI STEMPEL ════════════════════════════════════════════ */
+@keyframes stempel-pulse{
+  0%,100%{box-shadow:0 6px 32px rgba(0,0,0,.55),0 0 0 3px rgba(184,146,74,.7),0 0 0 6px rgba(184,146,74,.2);}
+  50%{box-shadow:0 6px 32px rgba(0,0,0,.55),0 0 0 4px rgba(184,146,74,.95),0 0 0 12px rgba(184,146,74,.18),0 0 0 22px rgba(184,146,74,.06);}
+}
+#juli-stempel{position:fixed;bottom:28px;right:28px;z-index:500;
+  width:152px;height:152px;
+  background:radial-gradient(circle at 40% 35%,#b02035 0%,var(--c) 60%,#6B1220 100%);
+  border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:18px;
+  animation:stempel-pulse 2.8s ease-in-out infinite;
+  cursor:pointer;transition:transform .2s;
+  border:3px solid rgba(184,146,74,.55);}
+#juli-stempel:hover{transform:scale(1.08);animation:none;box-shadow:0 8px 40px rgba(0,0,0,.65),0 0 0 3px rgba(184,146,74,.9),0 0 0 8px rgba(184,146,74,.25);}
+#juli-stempel .js-label{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin-bottom:5px;font-weight:700;}
+#juli-stempel .js-main{font-family:Georgia,serif;font-size:18px;color:#fff;line-height:1.3;font-weight:bold;text-shadow:0 1px 3px rgba(0,0,0,.5);}
+#juli-stempel .js-sub{font-size:12px;color:var(--g);margin-top:5px;font-weight:600;letter-spacing:.04em;}
+#juli-stempel .js-free{font-size:14px;color:#F2C06A;margin-top:6px;font-weight:700;letter-spacing:.01em;}
+
+/* ── MOBILE MENU ───────────────────────────────────────── */
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-brand" onclick="nav('home')">
+    <svg width="28" height="28" viewBox="0 0 130 130">
+      <line x1="65" y1="11" x2="65" y2="33" stroke="#0D1C3F" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="65" y1="97" x2="65" y2="119" stroke="#0D1C3F" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="11" y1="65" x2="35" y2="65" stroke="#0D1C3F" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="95" y1="65" x2="119" y2="65" stroke="#0D1C3F" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="65" cy="65" r="26" fill="none" stroke="#8C1A2A" stroke-width="2.5"/>
+      <circle cx="65" cy="65" r="14" fill="none" stroke="#8C1A2A" stroke-width="2.5"/>
+      <text x="65" y="70" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="16" fill="#8C1A2A" font-weight="bold">s</text>
+    </svg>
+    <span class="nav-wordmark"><em>S</em>ensibilis</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="sensibilis.html#zukunft" data-page="zukunft">KI &amp; Zukunft</a></li>
+    <li><a href="sensibilis.html#prozesse" data-page="prozesse">Digitalisierung</a></li>
+    <li class="nav-drop">
+      <a href="sensibilis.html#tools" data-page="tools">Tools &#x25BE;</a>
+      <div class="drop-menu">
+        <a href="sensibilis.html#tools">Tools &Uuml;bersicht</a>
+        <a href="sensibilis.html#kipass">KI Pass</a>
+        <a href="sensibilis.html#contentplaner">Content Planer</a>
+        <a href="sensibilis.html#webcheck">Website Check <span class="drop-soon">bald</span></a>
+        <a href="sensibilis.html#dms">DMS <span class="drop-soon">bald</span></a>
+      </div>
+    </li>
+    <li><a href="sensibilis.html#beratung" data-page="beratung">Beratung</a></li>
+    <li><a href="sensibilis.html#preise" data-page="preise">Preise</a></li>
+    <li><a href="sensibilis.html#blog" data-page="blog">Blog</a></li>
+    <li><a href="sensibilis.html#faq" data-page="faq">FAQ</a></li>
+    <li><a href="sensibilis.html#kontakt" class="nav-btn">Kontakt &#x2192;</a></li>
+    <li><a href="tel:+4958249653651" class="nav-phone">&#9990; 05824&thinsp;965365</a></li>
+  </ul>
+  <button class="ham" id="ham-btn">&#9776;</button>
+</nav>
+<div id="mob-menu">
+  <button onclick="closeMob()">&#x2715;</button>
+  <a href="sensibilis.html#zukunft">KI &amp; Zukunft</a>
+  <a href="sensibilis.html#prozesse">Digitalisierung</a>
+  <a href="sensibilis.html#tools">Tools</a>
+  <a href="sensibilis.html#kipass">KI Pass</a>
+  <a href="sensibilis.html#beratung">Beratung anfragen</a>
+  <a href="sensibilis.html#preise">Preise</a>
+  <a href="sensibilis.html#blog">Blog</a>
+  <a href="sensibilis.html#faq">FAQ</a>
+</div>
+<div class="page active">
+
+  <div class="page-header" style="min-height:320px;">
+    <div class="page-header-bg" style="background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&h=400&fit=crop&q=80') center/cover;"></div>
+    <div class="page-header-overlay" style="background:linear-gradient(135deg,rgba(13,28,63,.88) 0%,rgba(26,53,112,.72) 100%);"></div>
+    <div class="page-header-content">
+      <div class="page-header-eyebrow">Praxis &nbsp;&middot;&nbsp; Juli 2026 &nbsp;&middot;&nbsp; 6 Min. Lesezeit</div>
+      <h1 style="font-size:clamp(26px,3.5vw,44px);">KI einf&uuml;hren ohne IT-Abteilung &mdash;<br><em>so geht&rsquo;s</em></h1>
+    </div>
+  </div>
+  <div class="content-block">
+    <div style="max-width:760px;margin:0 auto;">
+      <p style="font-size:16px;color:var(--txt2);line-height:1.8;margin-bottom:32px;font-style:italic;border-left:3px solid var(--g);padding-left:20px;">K&uuml;nstliche Intelligenz kann auch in kleinen Unternehmen funktionieren &mdash; selbst wenn keine IT-Abteilung vorhanden ist. Entscheidend ist nicht die perfekte technische Infrastruktur, sondern ein klarer Einstieg mit einem konkreten Nutzen.</p>
+
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Warum KI auch ohne IT-Abteilung m&ouml;glich ist</h2>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Moderne KI-Tools sind heute so einfach aufgebaut, dass sie ohne Spezialwissen genutzt werden k&ouml;nnen. Oft reicht ein Browserzugang oder eine einfache Softwareoberfl&auml;che. Das macht den Einstieg besonders f&uuml;r kleine Teams realistisch &mdash; und f&uuml;r Betriebe in jeder Branche.</p>
+
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Welche Prozesse sich f&uuml;r den Einstieg eignen</h2>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:12px;">Am besten startest du mit Aufgaben, die regelm&auml;&szlig;ig vorkommen und wenig Risiko haben. Dazu geh&ouml;ren:</p>
+      <ul style="font-size:15px;color:var(--txt2);line-height:1.9;margin:0 0 18px;padding-left:24px;">
+        <li>E-Mail-Entw&uuml;rfe und Antwortvorlagen</li>
+        <li>Zusammenfassungen von Meetings oder Dokumenten</li>
+        <li>Angebotsvorlagen und Produktbeschreibungen</li>
+        <li>Social-Media-Texte und Newsletter</li>
+        <li>Interne Wissenssuche und Protokolle</li>
+      </ul>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Solche Aufgaben bringen oft schnell sp&uuml;rbaren Mehrwert &mdash; ohne dass eine technische Infrastruktur aufgebaut werden muss.</p>
+
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Welche Rollen du intern brauchst</h2>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Auch ohne IT-Team solltest du klare Verantwortlichkeiten haben. Eine Person sollte den fachlichen Nutzen pr&uuml;fen, eine zweite den Datenschutz im Blick behalten und eine dritte die Einf&uuml;hrung koordinieren. So bleibt der &Uuml;berblick erhalten und Entscheidungen werden sauber getroffen.</p>
+
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">So startest du in 30 Tagen mit KI</h2>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px;">
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--iv);border-radius:6px;border-left:3px solid var(--g);">
+          <div style="font-family:Georgia,serif;font-size:22px;color:var(--g);font-weight:bold;min-width:28px;">1</div>
+          <div><strong style="color:var(--txt);display:block;margin-bottom:4px;">Einen Anwendungsfall ausw&auml;hlen</strong><span style="font-size:14px;color:var(--txt2);">Nicht alles auf einmal. Eine Aufgabe, die t&auml;glich vorkommt und Zeit kostet.</span></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--iv);border-radius:6px;border-left:3px solid var(--g);">
+          <div style="font-family:Georgia,serif;font-size:22px;color:var(--g);font-weight:bold;min-width:28px;">2</div>
+          <div><strong style="color:var(--txt);display:block;margin-bottom:4px;">Ziel und Nutzen definieren</strong><span style="font-size:14px;color:var(--txt2);">Was soll das Tool konkret abnehmen? Woran misst du Erfolg?</span></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--iv);border-radius:6px;border-left:3px solid var(--g);">
+          <div style="font-family:Georgia,serif;font-size:22px;color:var(--g);font-weight:bold;min-width:28px;">3</div>
+          <div><strong style="color:var(--txt);display:block;margin-bottom:4px;">Ein passendes Tool testen</strong><span style="font-size:14px;color:var(--txt2);">Kostenlose Testphase nutzen. Kein Vertrag, bevor der Nutzen klar ist.</span></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--iv);border-radius:6px;border-left:3px solid var(--g);">
+          <div style="font-family:Georgia,serif;font-size:22px;color:var(--g);font-weight:bold;min-width:28px;">4</div>
+          <div><strong style="color:var(--txt);display:block;margin-bottom:4px;">Interne Regeln festlegen</strong><span style="font-size:14px;color:var(--txt2);">Was darf ins Tool, was nicht? Wer hat Zugang? Schriftlich und kurz.</span></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--iv);border-radius:6px;border-left:3px solid var(--g);">
+          <div style="font-family:Georgia,serif;font-size:22px;color:var(--g);font-weight:bold;min-width:28px;">5</div>
+          <div><strong style="color:var(--txt);display:block;margin-bottom:4px;">Mit kleinem Team starten</strong><span style="font-size:14px;color:var(--txt2);">1&ndash;2 Personen testen zuerst. Feedback sammeln, anpassen.</span></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--iv);border-radius:6px;border-left:3px solid var(--g);">
+          <div style="font-family:Georgia,serif;font-size:22px;color:var(--g);font-weight:bold;min-width:28px;">6</div>
+          <div><strong style="color:var(--txt);display:block;margin-bottom:4px;">Ergebnisse nach 4 Wochen pr&uuml;fen</strong><span style="font-size:14px;color:var(--txt2);">Lohnt es sich? Spart es Zeit? Dann rollout &mdash; wenn nicht, n&auml;chsten Anwendungsfall probieren.</span></div>
+        </div>
+      </div>
+
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Welche Tools du ausw&auml;hlen solltest</h2>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Ein gutes Tool sollte einfach bedienbar, bezahlbar und f&uuml;r deinen Zweck passend sein. Achte au&szlig;erdem auf Datenschutz, Support und m&ouml;gliche Schnittstellen zu bestehenden Prozessen. Nicht das modernste Tool ist das beste &mdash; sondern das, das zuverl&auml;ssig in deinen Alltag passt.</p>
+
+      <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Was du bei Datenschutz und Sicherheit beachten musst</h2>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:12px;">Auch bei einfachen KI-L&ouml;sungen gelten klare Grenzen. Lege schriftlich fest, was erlaubt ist und was nicht:</p>
+      <ul style="font-size:15px;color:var(--txt2);line-height:1.9;margin:0 0 18px;padding-left:24px;">
+        <li>Keine Kundendaten ohne gepr&uuml;ften AVV</li>
+        <li>Keine vertraulichen Gesch&auml;ftszahlen in kostenlose Tools</li>
+        <li>Keine Personaldaten ohne DSGVO-Pr&uuml;fung</li>
+        <li>Ergebnisse immer vor Verwendung pr&uuml;fen &mdash; KI irrt sich</li>
+      </ul>
+
+      <div style="background:rgba(13,28,63,.05);border:1px solid rgba(13,28,63,.12);border-radius:6px;padding:20px 24px;margin-bottom:40px;">
+        <p style="font-size:14px;color:var(--txt2);line-height:1.75;margin:0;">Weiterf&uuml;hrend: <a href="#" onclick="nav('blog-1')" style="color:var(--c);font-weight:600;">EU AI Act &mdash; Was kleine Unternehmen jetzt tun m&uuml;ssen &rarr;</a> &nbsp;&middot;&nbsp; <a href="#" onclick="nav('blog-3')" style="color:var(--c);font-weight:600;">ChatGPT DSGVO-konform einsetzen &rarr;</a></p>
+      </div>
+
+      <div style="background:var(--iv);border:1px solid rgba(184,146,74,.3);border-radius:8px;padding:32px;margin:40px 0;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:8px;">Fazit</div>
+        <p style="font-size:15px;color:var(--txt);line-height:1.8;margin:0;">KI muss kein Gro&szlig;projekt sein. Wenn du klein anf&auml;ngst, klare Verantwortlichkeiten definierst und den Nutzen regelm&auml;&szlig;ig pr&uuml;fst, kannst du auch ohne IT-Abteilung erfolgreich starten. Wichtig ist nicht die perfekte Technik &mdash; sondern ein sauberer Einstieg.</p>
+      </div>
+
+      <div style="margin-top:40px;padding-top:32px;border-top:1px solid var(--bdr);display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
+        <button class="btn btn-red" onclick="nav('beratung')">Beratungsgespr&auml;ch anfragen &rarr;</button>
+        <button onclick="nav('blog')" style="background:transparent;color:var(--txt2);border:1px solid var(--bdr);padding:12px 24px;border-radius:4px;font-size:14px;cursor:pointer;font-family:inherit;">&larr; Zur&uuml;ck zum Blog</button>
+      </div>
+    </div>
+    <div class="page-nav-links" style="margin-top:64px;"><a href="#" onclick="nav('blog')">Alle Artikel</a><a href="#" onclick="nav('blog-1')">EU AI Act</a><a href="#" onclick="nav('blog-3')">ChatGPT &amp; DSGVO</a></div>
+  </div>
+  <footer style="background:var(--n);padding:28px 48px;">
+    <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;">
+      <div><div style="font-family:Georgia,serif;font-size:15px;color:rgba(243,237,227,.85);margin-bottom:4px;"><em style="font-style:italic;color:var(--c);">S</em>ensibilis &mdash; Annett Mende</div><div style="font-size:13px;color:rgba(243,237,227,.6);">Tel. <a href="tel:+4958249653651" style="color:rgba(243,237,227,.6);">05824 965365</a></div></div>
+      <div style="font-size:13px;color:rgba(243,237,227,.65);"><a href="#" onclick="nav('impressum')" style="color:rgba(243,237,227,.65);">Impressum</a><span style="opacity:.4;">&nbsp;|&nbsp;</span><a href="#" onclick="nav('datenschutz')" style="color:rgba(243,237,227,.65);">Datenschutz</a><span style="opacity:.4;">&nbsp;|&nbsp;</span><a href="#" onclick="nav('agb')" style="color:rgba(243,237,227,.65);">AGB</a><span style="opacity:.4;">&nbsp;|&nbsp;</span><a href="#" onclick="nav('glossar')" style="color:rgba(243,237,227,.65);">Glossar</a></div>
+    </div>
+  </footer>
+
+</div>
+<script>
+function nav(id){ window.location.href='sensibilis.html#'+id; }
+function closeMob(){ document.getElementById('mob-menu').classList.remove('open'); }
+document.addEventListener('DOMContentLoaded',function(){
+  document.getElementById('ham-btn').addEventListener('click',function(){
+    document.getElementById('mob-menu').classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
