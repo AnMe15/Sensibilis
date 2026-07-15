@@ -252,8 +252,8 @@ nav{
 }
 
 /* ══ PAGE ROUTER ═════════════════════════════════════════════ */
-.page{display:none;}
-.page.active{display:block;}
+.page{position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;pointer-events:none;}
+.page.active{position:static;left:auto;top:auto;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal;pointer-events:auto;}
 
 /* ══ HEADER BILD BEREICHE ════════════════════════════════════ */
 .page-header{
