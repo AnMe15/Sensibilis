@@ -321,8 +321,8 @@ nav{
 }
 
 /* ══ PAGE ROUTER ═════════════════════════════════════════════ */
-.page{position:absolute;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;pointer-events:none;}
-.page.active{position:static;left:auto;top:auto;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal;pointer-events:auto;}
+.page{display:none;}
+.page.active{display:block;}
 
 /* ══ HEADER BILD BEREICHE ════════════════════════════════════ */
 .page-header{
@@ -2205,10 +2205,13 @@ rd();step(1);
         <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:16px;">Gro&szlig;e Beratungen schicken ein Team, schreiben ein Konzept und verschwinden. Bei mir bekommen Sie jemanden, der Ihr Unternehmen wirklich kennenlernt &mdash; und bleibt, bis KI wirklich funktioniert.</p>
         <p style="font-size:15px;color:var(--txt2);line-height:1.8;">Zertifizierte KI-Managerin, Praxiserfahrung aus dem Mittelstand, direkter Draht &mdash; kein Ticket-System.</p>
       </div>
-      <div style="background:linear-gradient(135deg,rgba(140,26,42,.08) 0%,rgba(13,28,63,.06) 100%);border-radius:8px;padding:44px 40px;border:1px solid var(--bdr);">
-        <div style="font-family:Georgia,serif;font-size:22px;font-style:italic;color:var(--txt);line-height:1.6;margin-bottom:20px;">&bdquo;Ich begleite Sie, bis KI bei Ihnen wirklich arbeitet &mdash; nicht nur bis zur Pr&auml;sentation.&ldquo;</div>
-        <div style="font-size:13px;font-weight:600;color:var(--c);letter-spacing:.06em;text-transform:uppercase;">Annett Mende</div>
-        <div style="font-size:12px;color:var(--txt2);margin-top:3px;">Zertifizierte KI-Managerin &middot; Gr&uuml;nderin <em class="brand-s">S</em>ensibilis</div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+        <img src="img/annett-mende.png" alt="Annett Mende — KI-Beraterin und Gründerin von Sensibilis" style="width:100%;max-width:420px;border-radius:8px;object-fit:cover;box-shadow:0 8px 40px rgba(22,10,13,.18);">
+        <div style="background:linear-gradient(135deg,rgba(140,26,42,.08) 0%,rgba(13,28,63,.06) 100%);border-radius:8px;padding:24px 28px;border:1px solid var(--bdr);width:100%;max-width:420px;">
+          <div style="font-family:Georgia,serif;font-size:17px;font-style:italic;color:var(--txt);line-height:1.6;margin-bottom:12px;">&bdquo;Ich begleite Sie, bis KI bei Ihnen wirklich arbeitet &mdash; nicht nur bis zur Pr&auml;sentation.&ldquo;</div>
+          <div style="font-size:13px;font-weight:600;color:var(--c);letter-spacing:.06em;text-transform:uppercase;">Annett Mende</div>
+          <div style="font-size:12px;color:var(--txt2);margin-top:3px;">Zertifizierte KI-Managerin &middot; Gr&uuml;nderin <em class="brand-s">S</em>ensibilis</div>
+        </div>
       </div>
     </div>
 
@@ -3618,11 +3621,18 @@ rd();step(1);
 </div>
 <script>
 (function(){
-  var aktiveMonat=[7]; /* Monatszahlen: 7=Juli, 8=August usw. */
+  var aktiveMonat=[7];
   var stempel=document.getElementById('juli-stempel');
-  if(stempel&&aktiveMonat.indexOf(new Date().getMonth()+1)!==-1){
-    stempel.style.display='flex';
-  }
+  if(stempel&&aktiveMonat.indexOf(new Date().getMonth()+1)!==-1){stempel.style.display='flex';}
+
+  /* Social Icons in alle Footer injizieren */
+  var svgFB='<a href="#" aria-label="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#1877F2;transition:opacity .2s;" onmouseenter="this.style.opacity=\'.8\'" onmouseleave="this.style.opacity=\'1\'"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>';
+  var svgIG='<a href="#" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);transition:opacity .2s;" onmouseenter="this.style.opacity=\'.8\'" onmouseleave="this.style.opacity=\'1\'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>';
+  var socialBlock='<div style="display:flex;gap:8px;align-items:center;">'+svgFB+svgIG+'</div>';
+
+  document.querySelectorAll('.footer-mini-inner').forEach(function(el){
+    el.insertAdjacentHTML('beforeend', socialBlock);
+  });
 })();
 </script>
 
