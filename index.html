@@ -3934,7 +3934,7 @@ function sendChat(){
 (function(){
   var API='https://sensibilis-api.onrender.com/track'; /* Live */
   function send(data){
-    try{ navigator.sendBeacon(API, JSON.stringify(data)); }catch(e){}
+    try{ navigator.sendBeacon(API, new Blob([JSON.stringify(data)],{type:'application/json'})); }catch(e){}
   }
   function pageview(){
     send({type:'pageview',page:window.location.hash||'#home',referrer:document.referrer,ts:Date.now(),lang:navigator.language,w:window.innerWidth});
