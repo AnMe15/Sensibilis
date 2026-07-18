@@ -133,7 +133,7 @@ tr:hover td{background:rgba(184,146,74,.07)}
 
 <script>
 // ── Konfiguration ────────────────────────────────────────────────────────────
-const API = 'https://sensibilis-api.onrender.com';
+const API = 'https://mein-agent.onrender.com';
 const USER = 'admin'; // HTTP-Basic username
 
 // ── Farben (Brand) ───────────────────────────────────────────────────────────
@@ -169,6 +169,10 @@ async function loadDashboard(){
     if(res.status===401){ showLoginErr('Falsches Passwort.'); _pw=''; return; }
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
+    data.top_pages_7d  = data.top_pages_7d  || [];
+    data.top_pages_30d = data.top_pages_30d || [];
+    data.top_clicks_30d= data.top_clicks_30d|| [];
+    data.daily_30d     = data.daily_30d     || [];
 
     document.getElementById('login').style.display = 'none';
     document.getElementById('app').style.display = 'block';
