@@ -3970,19 +3970,73 @@ function sendChat(){
 <!-- ══ SENSIBILIS ANALYTICS TRACKING ════════════════════════ -->
 <script>
 (function(){
-  var API='https://sensibilis-api.onrender.com/track'; /* Live */
+  var API='https://sensibilis-api.onrender.com/track';
+
+  /* Session-ID + Neu/Wiederkehrend */
+  var sid=sessionStorage.getItem('snb_sid');
+  if(!sid){sid='s'+(Date.now().toString(36)+Math.random().toString(36).slice(2,7));sessionStorage.setItem('snb_sid',sid);}
+  var isNew=!localStorage.getItem('snb_visited');
+  if(isNew)localStorage.setItem('snb_visited','1');
+
+  /* Device */
+  function device(){var w=window.innerWidth;return w<768?'mobile':w<1200?'tablet':'desktop';}
+
+  /* Referrer-Quelle */
+  function refSource(ref){
+    if(!ref)return'direkt';
+    if(/google\./i.test(ref))return'google';
+    if(/instagram\.|facebook\.|linkedin\.|twitter\./i.test(ref))return'social';
+    if(/t-online\.|web\.de\.|gmx\./i.test(ref))return'email';
+    return'referral';
+  }
+
   function send(data){
-    try{ navigator.sendBeacon(API, new Blob([JSON.stringify(data)],{type:'application/json'})); }catch(e){}
+    try{navigator.sendBeacon(API,new Blob([JSON.stringify(data)],{type:'application/json'}));}catch(e){}
   }
-  function pageview(){
-    send({type:'pageview',page:window.location.hash||'#home',referrer:document.referrer,ts:Date.now(),lang:navigator.language,w:window.innerWidth});
+
+  /* Scroll-Tracking */
+  var maxScroll=0;
+  function updateScroll(){
+    var h=document.documentElement;
+    var pct=h.scrollHeight<=h.clientHeight?100:Math.round((h.scrollTop+h.clientHeight)/h.scrollHeight*100);
+    if(pct>maxScroll)maxScroll=pct;
   }
-  pageview();
-  window.addEventListener('hashchange', pageview);
+  window.addEventListener('scroll',updateScroll,{passive:true});
+
+  /* Zeit + Exit */
+  var pageEnter=Date.now();
+  var curPage=window.location.hash.replace('#','')||'home';
+
+  function sendTiming(pg,isExit){
+    var secs=Math.round((Date.now()-pageEnter)/1000);
+    send({type:'timing',page:pg,session_id:sid,time_on_page:secs,scroll_depth:maxScroll,is_exit:!!isExit,ts:Date.now()});
+  }
+
+  /* Pageview */
+  function pageview(pg){
+    send({type:'pageview',page:pg,session_id:sid,device:device(),is_new:isNew,
+      referrer:document.referrer,ref_source:refSource(document.referrer),
+      lang:navigator.language,w:window.innerWidth,ts:Date.now()});
+  }
+
+  pageview(curPage);
+
+  window.addEventListener('hashchange',function(){
+    var newPg=window.location.hash.replace('#','')||'home';
+    sendTiming(curPage,false);
+    maxScroll=0;pageEnter=Date.now();curPage=newPg;
+    pageview(curPage);
+  });
+
+  document.addEventListener('visibilitychange',function(){
+    if(document.visibilityState==='hidden')sendTiming(curPage,true);
+  });
+
   document.addEventListener('click',function(e){
     var btn=e.target.closest('.btn,[data-track]');
     if(!btn)return;
-    send({type:'click',label:(btn.dataset.track||btn.textContent.trim().replace(/\s+/g,' ').slice(0,50)),page:window.location.hash||'#home',ts:Date.now()});
+    send({type:'click',label:(btn.dataset.track||btn.textContent.trim().replace(/\s+/g,' ').slice(0,50)),
+      page:curPage,session_id:sid,ts:Date.now()});
   });
 })();
 </script>
