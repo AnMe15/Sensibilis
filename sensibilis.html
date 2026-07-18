@@ -3405,7 +3405,7 @@ rd();step(1);
       </div>
 
       <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Welche Tools Sie ausw&auml;hlen sollten</h2>
-      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Ein gutes Tool sollte einfach bedienbar, bezahlbar und f&uuml;r deinen Zweck passend sein. Achte au&szlig;erdem auf Datenschutz, Support und m&ouml;gliche Schnittstellen zu bestehenden Prozessen. Nicht das modernste Tool ist das beste &mdash; sondern das, das zuverl&auml;ssig in deinen Alltag passt.</p>
+      <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:18px;">Ein gutes Tool sollte einfach bedienbar, bezahlbar und f&uuml;r Ihren Zweck passend sein. Achten Sie au&szlig;erdem auf Datenschutz, Support und m&ouml;gliche Schnittstellen zu bestehenden Prozessen. Nicht das modernste Tool ist das beste &mdash; sondern das, das zuverl&auml;ssig in Ihren Alltag passt.</p>
 
       <h2 style="font-family:Georgia,serif;font-weight:normal;font-size:26px;color:var(--txt);margin:40px 0 14px;">Was Sie bei Datenschutz und Sicherheit beachten m&uuml;ssen</h2>
       <p style="font-size:15px;color:var(--txt2);line-height:1.8;margin-bottom:12px;">Auch bei einfachen KI-L&ouml;sungen gelten klare Grenzen. Lege schriftlich fest, was erlaubt ist und was nicht:</p>
@@ -3876,18 +3876,26 @@ function chkShowResult(){
   var res=document.getElementById('chk-result');
   var head=document.getElementById('chk-res-head');
   var text=document.getElementById('chk-res-text');
-  if(score>=7){
-    res.style.background='rgba(13,28,63,.06)';res.style.borderLeftColor='#0D1C3F';
-    head.style.color='#0D1C3F';head.textContent='Gut aufgestellt.';
-    text.textContent='Sie haben bereits vieles im Griff. Für eine vollständige, prüfungssichere Dokumentation empfehle ich den KI Pass — er schließt die letzten Lücken und liefert ein exportfertiges Ergebnis.';
+  if(score>=8){
+    res.style.background='rgba(13,28,63,.07)';res.style.borderLeftColor='#0D1C3F';
+    head.style.color='#0D1C3F';head.textContent='Sehr gut aufgestellt — jetzt prüfungssicher machen.';
+    text.innerHTML='Sie haben KI-Einsatz, Datenschutz und Transparenz bereits professionell im Griff. Damit das auch im Ernstfall nachweisbar ist: Der <strong>KI Pass</strong> dokumentiert alles exportfertig nach EU AI Act — in wenigen Minuten erledigt.';
+  } else if(score>=6){
+    res.style.background='rgba(13,28,63,.05)';res.style.borderLeftColor='#3a5a9b';
+    head.style.color='#0D1C3F';head.textContent='Solide Basis — die Dokumentation fehlt noch.';
+    text.innerHTML='Sie haben den Überblick und die wichtigsten Regeln im Betrieb verankert. Was noch fehlt: eine strukturierte, prüfungssichere Erfassung nach EU AI Act. Der <strong>KI Pass</strong> schließt diese Lücke gezielt.';
   } else if(score>=4){
     res.style.background='rgba(184,146,74,.07)';res.style.borderLeftColor='#B8924A';
-    head.style.color='#0D1C3F';head.textContent='Solide Basis — aber noch Lücken.';
-    text.textContent='Das ist normal. Die meisten Betriebe wissen, dass KI ein Thema ist — aber nicht genau, wo sie konkret stehen. Ein kurzes Gespräch zeigt, was fehlt und wie es sich schnell schließen lässt.';
+    head.style.color='#0D1C3F';head.textContent='Auf dem richtigen Weg — gezielte Lücken schließen.';
+    text.innerHTML='Die Grundlagen sind da, aber Datenschutz-Details, Risikoklassen und Dokumentation brauchen noch Aufmerksamkeit. Ein strukturierter Fahrplan hilft — entweder mit dem <strong>KI Pass</strong> für die Dokumentation oder einem <strong>Erstgespräch</strong> für den größeren Überblick.';
+  } else if(score>=2){
+    res.style.background='rgba(184,146,74,.05)';res.style.borderLeftColor='#c9973a';
+    head.style.color='#8C4A10';head.textContent='Erste Schritte gemacht — aber noch viele offene Punkte.';
+    text.innerHTML='Sie haben begonnen, das Thema anzugehen — das ist der entscheidende erste Schritt. Für einen strukturierten Einstieg empfehle ich ein <strong>kostenloses Erstgespräch</strong>: Wir schauen gemeinsam, was als nächstes sinnvoll ist.';
   } else {
     res.style.background='rgba(140,26,42,.06)';res.style.borderLeftColor='#8C1A2A';
-    head.style.color='#8C1A2A';head.textContent='Handlungsbedarf — aber kein Grund zur Panik.';
-    text.textContent='Das geht den meisten kleinen Betrieben so. KI ist neu, die Regeln sind komplex. Genau dafür gibt es Sensibilis — Schritt für Schritt, ohne Fachjargon und ohne IT-Abteilung.';
+    head.style.color='#8C1A2A';head.textContent='KI-Compliance noch nicht gestartet — guter Zeitpunkt jetzt.';
+    text.innerHTML='Das ist kein Vorwurf — die meisten kleinen Betriebe stehen noch ganz am Anfang. Wer jetzt strukturiert einsteigt, gewinnt Vorsprung. Genau dafür gibt es <strong>Sensibilis</strong>: Schritt für Schritt, ohne IT-Abteilung, ohne Fachjargon.';
   }
   res.style.display='block';
   setTimeout(function(){res.style.opacity='1';res.scrollIntoView({behavior:'smooth',block:'start'});},80);
