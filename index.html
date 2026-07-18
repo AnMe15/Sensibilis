@@ -773,6 +773,48 @@ footer{background:var(--ink);padding:56px 48px 32px;}
   .ref-grid{grid-template-columns:1fr;}
   .promo-box{padding:28px 24px;}
 }
+
+/* ══ MOBILE FIXES (max-width:768px) ═══════════════════════════ */
+@media(max-width:768px){
+  /* Alle inline Grid-Mehrspaltenlayouts → einspaltig */
+  .page [style*="grid-template-columns:1fr 1fr"],
+  .page [style*="grid-template-columns:repeat(3"],
+  .page [style*="grid-template-columns:repeat(4"],
+  .page [style*="grid-template-columns:1fr 1.08fr"],
+  .page [style*="grid-template-columns:160px 1fr"]{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+  /* Foto-Split: Bild nicht überdimensioniert */
+  .page [style*="min-height:460px"]{min-height:200px !important;}
+  .page [style*="min-height:480px"]{min-height:200px !important;}
+  /* Schweres Padding in Boxen reduzieren */
+  .page [style*="padding:48px 40px"]{padding:28px 20px !important;}
+  .page [style*="padding:56px 52px"]{padding:32px 20px !important;}
+  .page [style*="padding:48px;"],
+  .page [style*="padding:48px "],
+  [style*="padding:56px 24px"]{padding:32px 16px !important;}
+  /* Glossar-Kategorie-CTA: Button unter Text statt rechts daneben */
+  .page [style*="justify-content:space-between"][style*="flex-wrap:wrap"] > button,
+  .page [style*="justify-content:space-between"][style*="flex-wrap:wrap"] > .btn{
+    width:100%;
+  }
+  /* KI Pass Juli-Banner: Stack */
+  #page-kipass > [style*="display:flex"][style*="justify-content:space-between"]{
+    flex-direction:column !important;
+    gap:16px !important;
+    align-items:flex-start !important;
+  }
+  /* Content-Block seitlicher Rand */
+  .content-block{padding-left:16px !important;padding-right:16px !important;}
+  /* page-nav-links: wrap sauber */
+  .page-nav-links{gap:16px !important;}
+  /* Hero-Buttons nicht zu breit */
+  .hero-cta-group{flex-direction:column;gap:12px;}
+  /* Preise: Karten-Buttons full width */
+  .pricing-grid .btn{width:100%;}
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -2038,11 +2080,11 @@ var KL={
   5:{t:'Klasse 5 — Höchst sensibel',d:'EU-Hosting/souveräne Lösung praktisch zwingend. Rechtsberatung vor Einsatz einholen.',c:'#c0392b'},
 };
 var st={d:[],e:null,b:null};
-function rd(){var c=document.getElementById('sc2-daten');if(!c)return;c.innerHTML=D.map(function(o){var sel=st.d.indexOf(o.id)>-1;return'<label style="display:block;width:100%;padding:11px 15px;border:1.5px solid '+(sel?'var(--g)':'var(--bdr)')+';border-radius:5px;cursor:pointer;margin-bottom:7px;background:'+(sel?'rgba(184,146,74,.07)':'#fff')+';box-sizing:border-box;"><table style="width:100%;border-collapse:collapse;"><tr><td style="width:22px;vertical-align:middle;padding:0;"><input type="checkbox" '+(sel?'checked':'')+' onchange="sc2Td(\''+o.id+'\')" style="width:15px;height:15px;accent-color:var(--g);margin:0;"></td><td style="vertical-align:middle;padding-left:8px;font-size:14px;color:#0d1c3f;text-transform:none;letter-spacing:normal;white-space:normal;">'+o.l+'</td></tr></table></label>';}).join('');}
+function rd(){var c=document.getElementById('sc2-daten');if(!c)return;c.innerHTML=D.map(function(o){var sel=st.d.indexOf(o.id)>-1;return'<label style="display:block;width:100%;padding:11px 15px;border:1.5px solid '+(sel?'var(--g)':'var(--bdr)')+';border-radius:5px;cursor:pointer;margin-bottom:7px;background:'+(sel?'rgba(184,146,74,.07)':'#fff')+';box-sizing:border-box;"><table style="width:100%;border-collapse:collapse;"><tr><td style="width:22px;vertical-align:middle;padding:0;"><input type="checkbox" '+(sel?'checked':'')+' onclick="sc2Td(\''+o.id+'\')" style="width:15px;height:15px;accent-color:var(--g);margin:0;"></td><td style="vertical-align:middle;padding-left:8px;font-size:14px;color:#0d1c3f;text-transform:none;letter-spacing:normal;white-space:normal;">'+o.l+'</td></tr></table></label>';}).join('');}
 
-function re(){var c=document.getElementById('sc2-einsatz');if(!c)return;c.innerHTML=E.map(function(o){var sel=st.e===o.id;return'<label style="display:block;width:100%;padding:11px 15px;border:1.5px solid '+(sel?'var(--c)':'var(--bdr)')+';border-radius:5px;cursor:pointer;margin-bottom:7px;background:'+(sel?'rgba(140,26,42,.06)':'#fff')+';box-sizing:border-box;"><table style="width:100%;border-collapse:collapse;"><tr><td style="width:22px;vertical-align:middle;padding:0;"><input type="radio" name="sc2e" '+(sel?'checked':'')+' onchange="sc2Se(\''+o.id+'\')" style="accent-color:var(--c);margin:0;"></td><td style="vertical-align:middle;padding-left:8px;font-size:14px;font-weight:600;color:#0d1c3f;text-transform:none;letter-spacing:normal;white-space:normal;">'+o.l+'</td></tr></table><div style="font-size:12px;color:#666;margin-top:4px;padding-left:30px;text-transform:none;letter-spacing:normal;">'+o.h+'</div></label>';}).join('');}
+function re(){var c=document.getElementById('sc2-einsatz');if(!c)return;c.innerHTML=E.map(function(o){var sel=st.e===o.id;return'<label style="display:block;width:100%;padding:11px 15px;border:1.5px solid '+(sel?'var(--c)':'var(--bdr)')+';border-radius:5px;cursor:pointer;margin-bottom:7px;background:'+(sel?'rgba(140,26,42,.06)':'#fff')+';box-sizing:border-box;"><table style="width:100%;border-collapse:collapse;"><tr><td style="width:22px;vertical-align:middle;padding:0;"><input type="radio" name="sc2e" '+(sel?'checked':'')+' onclick="sc2Se(\''+o.id+'\')" style="accent-color:var(--c);margin:0;"></td><td style="vertical-align:middle;padding-left:8px;font-size:14px;font-weight:600;color:#0d1c3f;text-transform:none;letter-spacing:normal;white-space:normal;">'+o.l+'</td></tr></table><div style="font-size:12px;color:#666;margin-top:4px;padding-left:30px;text-transform:none;letter-spacing:normal;">'+o.h+'</div></label>';}).join('');}
 
-function rb(){var c=document.getElementById('sc2-budget');if(!c)return;c.innerHTML=B.map(function(o){var sel=st.b===o.id;return'<label style="display:block;width:100%;padding:11px 15px;border:1.5px solid '+(sel?'var(--n)':'var(--bdr)')+';border-radius:5px;cursor:pointer;margin-bottom:7px;background:'+(sel?'rgba(13,28,63,.06)':'#fff')+';box-sizing:border-box;"><table style="width:100%;border-collapse:collapse;"><tr><td style="width:22px;vertical-align:middle;padding:0;"><input type="radio" name="sc2b" '+(sel?'checked':'')+' onchange="sc2Sb('+o.id+')" style="accent-color:var(--n);margin:0;"></td><td style="vertical-align:middle;padding-left:8px;font-size:14px;color:#0d1c3f;text-transform:none;letter-spacing:normal;white-space:normal;">'+o.l+'</td></tr></table></label>';}).join('');}
+function rb(){var c=document.getElementById('sc2-budget');if(!c)return;c.innerHTML=B.map(function(o){var sel=st.b===o.id;return'<label style="display:block;width:100%;padding:11px 15px;border:1.5px solid '+(sel?'var(--n)':'var(--bdr)')+';border-radius:5px;cursor:pointer;margin-bottom:7px;background:'+(sel?'rgba(13,28,63,.06)':'#fff')+';box-sizing:border-box;"><table style="width:100%;border-collapse:collapse;"><tr><td style="width:22px;vertical-align:middle;padding:0;"><input type="radio" name="sc2b" '+(sel?'checked':'')+' onclick="sc2Sb('+o.id+')" style="accent-color:var(--n);margin:0;"></td><td style="vertical-align:middle;padding-left:8px;font-size:14px;color:#0d1c3f;text-transform:none;letter-spacing:normal;white-space:normal;">'+o.l+'</td></tr></table></label>';}).join('');}
 
 function err(m){var e=document.getElementById('sc2-err');if(e){e.textContent=m;e.style.display=m?'block':'none';}}
 function step(n){var qid=typeof n==='number'?'q'+n:n;['q1','q2','q3','res'].forEach(function(s){var el=document.getElementById('sc2-'+s);if(el)el.style.display='none';});var el=document.getElementById('sc2-'+qid);if(el)el.style.display='block';var qi=qid==='res'?3:parseInt(qid.replace('q',''),10);[1,2,3].forEach(function(i){var b=document.getElementById('sc2-b'+i);if(b)b.style.background=(i<=qi)?'var(--g)':'rgba(184,146,74,.25)';});err('');}
@@ -3847,7 +3889,7 @@ function chkShowResult(){
     text.textContent='Das geht den meisten kleinen Betrieben so. KI ist neu, die Regeln sind komplex. Genau dafür gibt es Sensibilis — Schritt für Schritt, ohne Fachjargon und ohne IT-Abteilung.';
   }
   res.style.display='block';
-  setTimeout(function(){res.style.opacity='1';},50);
+  setTimeout(function(){res.style.opacity='1';res.scrollIntoView({behavior:'smooth',block:'start'});},80);
   document.getElementById('chk-cta').style.display='block';
 }
 function chkReset(){
