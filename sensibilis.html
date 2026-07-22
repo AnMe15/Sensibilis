@@ -566,6 +566,8 @@ footer{background:var(--ink);padding:56px 48px 32px;}
 .chat-input-row button{background:var(--c);color:#fff;border:none;padding:0 18px;
   font-size:16px;cursor:pointer;transition:background .2s;}
 .chat-input-row button:hover{background:var(--c-d);}
+.chat-cta{display:inline-block;margin-top:8px;background:var(--c);color:#fff;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:none;transition:opacity .2s;}
+.chat-cta:hover{opacity:.85}
 
 /* ══ CHECKLISTE ══════════════════════════════════════════════ */
 .chk-item{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;border:1px solid rgba(13,28,63,.12);border-radius:4px;margin-bottom:10px;cursor:pointer;transition:background .2s,border-color .2s;background:#fff;}
@@ -4278,17 +4280,30 @@ document.addEventListener('DOMContentLoaded',function(){
   var ci=document.getElementById('chat-in');
   if(ci)ci.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();sendChat();}});
 });
+const kbTopics=['KI Pass','Schnellcheck','KI Pass Preis','EU AI Act','EU AI Act Fristen','DSGVO','ChatGPT','Copilot','Risikoklassen','Content Planer','Website-Check','Handwerk','Hotel & Gastronomie','Wer ist Sensibilis','Region','Wie anfangen','Aufwand & Dauer','Beratung & Kontakt','Datenschutz KI-Tools','Zukunft & Tools','DMS','Begleitung & Leistungen','KI allgemein'];
 function sendChat(){
   const inp=document.getElementById('chat-in');
   const q=inp.value.trim();if(!q)return;
   const msgs=document.getElementById('chat-msgs');
   msgs.innerHTML+=`<div class="msg msg-user">${q}</div>`;
   inp.value='';
-  const match=kb.find(([rx])=>rx.test(q));
+  const matchIdx=kb.findIndex(([rx])=>rx.test(q));
+  const match=matchIdx>=0?kb[matchIdx]:null;
   const reply=match?match[1]:'Das beantworte ich am besten persönlich — schreiben Sie mir an amen1@t-online.de.';
+  const topic=matchIdx>=0?kbTopics[matchIdx]||null:null;
+  const isLead=/beratung|gespräch|termin|kontakt|schreib|mail|telefon|preis|kosten|wie teuer/i.test(q);
   setTimeout(()=>{
-    msgs.innerHTML+=`<div class="msg msg-bot">${reply}</div>`;
+    const cta=isLead?'<br><button class="chat-cta" onclick="nav(\'kontakt\')">Direkt anfragen &#8594;</button>':'';
+    msgs.innerHTML+=`<div class="msg msg-bot">${reply}${cta}</div>`;
     msgs.scrollTop=msgs.scrollHeight;
+    try{
+      var sid=sessionStorage.getItem('snb_sid')||'anon';
+      fetch('https://sensibilis-api.onrender.com/chat',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({session_id:sid,user_message:q,bot_reply:reply,matched_topic:topic,led_to_contact:isLead})
+      });
+    }catch(e){}
   },500);
   msgs.scrollTop=msgs.scrollHeight;
 }
