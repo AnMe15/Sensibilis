@@ -4300,9 +4300,10 @@ function sendChat(){
     msgs.scrollTop=msgs.scrollHeight;
     try{
       var sid=sessionStorage.getItem('snb_sid')||'anon';
-      fetch('https://sensibilis-api.onrender.com/chat',{
+      var _sk='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFycGFlZWdsZnBmeXd1bnZ2Z2txIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4OTQ3NDEsImV4cCI6MjA5ODQ3MDc0MX0.CsWL3SlhbaX9OHqaPx0KmTgHYg7hq63dRL_LYFDjK54';
+      fetch('https://qrpaeeglfpfywunvvgkq.supabase.co/rest/v1/sensibilis_chats',{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
+        headers:{'apikey':_sk,'Authorization':'Bearer '+_sk,'Content-Type':'application/json','Prefer':'return=minimal'},
         body:JSON.stringify({session_id:sid,user_message:q,bot_reply:reply,matched_topic:topic,led_to_contact:isLead})
       });
     }catch(e){}
