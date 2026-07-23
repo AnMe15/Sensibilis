@@ -584,6 +584,10 @@ footer{background:var(--ink);padding:56px 48px 32px;}
 #chat-mic:hover{background:#ede6d8;}
 #chat-mic.listening{background:var(--c);color:#fff;animation:micpulse .8s infinite alternate;}
 @keyframes micpulse{from{opacity:.7}to{opacity:1}}
+#chat-badge{position:absolute;top:-4px;right:-4px;background:#e53935;color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;pointer-events:none;border:2px solid #fff;}
+@keyframes chatpulse{0%,100%{box-shadow:0 4px 20px rgba(0,0,0,.35),0 0 0 0 rgba(140,26,42,.5)}70%{box-shadow:0 4px 20px rgba(0,0,0,.35),0 0 0 12px rgba(140,26,42,0)}}
+#chat-btn.pulse{animation:chatpulse 2s infinite;}
+#chat-disclaimer{font-size:10px;color:#888;text-align:center;padding:5px 12px 7px;background:#faf8f5;border-top:1px solid #ece6dc;line-height:1.4;flex-shrink:0;}
 
 /* ══ CHECKLISTE ══════════════════════════════════════════════ */
 .chk-item{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;border:1px solid rgba(13,28,63,.12);border-radius:4px;margin-bottom:10px;cursor:pointer;transition:background .2s,border-color .2s;background:#fff;}
@@ -3979,10 +3983,10 @@ rd();step(1);
   <div id="chat-window" style="display:none;">
     <div class="chat-header">
       <span>Sensi <span style="font-size:10px;font-weight:400;opacity:.6;letter-spacing:.04em;">· KI-Assistentin</span></span>
-      <button onclick="document.getElementById('chat-window').style.display='none'">&#x2715;</button>
+      <button onclick="toggleChat()">&#x2715;</button>
     </div>
     <div id="chat-msgs" class="chat-msgs">
-      <div class="msg msg-bot">Hallo! Ich bin Sensi, die KI-Assistentin von Sensibilis. Was kann ich f&uuml;r Sie tun?</div>
+      <div id="chat-welcome" class="msg msg-bot"></div>
     </div>
     <div id="chat-chips">
       <button class="chat-chip" onclick="chipClick('Was ist der KI Pass?')">KI Pass</button>
@@ -3995,8 +3999,9 @@ rd();step(1);
       <button id="chat-mic" onclick="startMic()" title="Sprechen">&#x1F3A4;</button>
       <button onclick="sendChat()">&#x2192;</button>
     </div>
+    <div id="chat-disclaimer">Sensi ist eine KI und kann Fehler machen &mdash; bei wichtigen Entscheidungen bitte direkt Annett fragen.</div>
   </div>
-  <button id="chat-btn" onclick="var w=document.getElementById('chat-window');w.style.display=w.style.display==='none'||w.style.display===''?'flex':'none'" style="width:60px;height:60px;border-radius:50%;background:var(--c);border:none;box-shadow:0 4px 20px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;transition:transform .2s,background .2s;">&#x1F4AC;</button>
+  <button id="chat-btn" onclick="toggleChat()" style="position:relative;width:60px;height:60px;border-radius:50%;background:var(--c);border:none;box-shadow:0 4px 20px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;transition:transform .2s,background .2s;">&#x1F4AC;<span id="chat-badge">1</span></button>
 </div>
 
 <script>
@@ -4404,9 +4409,42 @@ const kb=[
     'Das ist nicht mein Fachgebiet, ehrlich gesagt. Aber KI-Beratung, EU AI Act, DSGVO, oder wie man ChatGPT sicher nutzt — da kann ich helfen. Was beschäftigt Sie in dem Bereich?'
   ]],
 ];
+var _chatOpen=false;
+var _welcomed=false;
+function toggleChat(){
+  var w=document.getElementById('chat-window');
+  var btn=document.getElementById('chat-btn');
+  var badge=document.getElementById('chat-badge');
+  _chatOpen=!_chatOpen;
+  w.style.display=_chatOpen?'flex':'none';
+  if(badge)badge.style.display=_chatOpen?'none':'flex';
+  if(btn){btn.classList.remove('pulse');}
+  if(_chatOpen&&!_welcomed){_welcomed=true;typeWelcome();}
+}
+function typeWelcome(){
+  var el=document.getElementById('chat-welcome');
+  if(!el)return;
+  var txt='Hallo! Ich bin Sensi, die KI-Assistentin von Sensibilis. Was kann ich für Sie tun?';
+  var i=0;
+  el.textContent='';
+  var t=setInterval(function(){
+    if(i<txt.length){el.textContent+=txt[i];i++;}
+    else{clearInterval(t);}
+  },28);
+}
 document.addEventListener('DOMContentLoaded',function(){
   var ci=document.getElementById('chat-in');
   if(ci)ci.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();sendChat();}});
+  var btn=document.getElementById('chat-btn');
+  if(btn)btn.classList.add('pulse');
+  if(!sessionStorage.getItem('snb_chat_opened')){
+    setTimeout(function(){
+      if(!_chatOpen){
+        sessionStorage.setItem('snb_chat_opened','1');
+        toggleChat();
+      }
+    },8000);
+  }
 });
 const kbTopics=['KI Pass','Schnellcheck','KI Pass Preis','EU AI Act','EU AI Act Fristen','DSGVO','ChatGPT','Copilot','Risikoklassen','Content Planer','Website-Check','Handwerk','Hotel & Gastronomie','Wer ist Sensibilis','Region','Wie anfangen','Aufwand & Dauer','Beratung Ablauf','Beratung & Kontakt','Datenschutz KI-Tools','Zukunft & Tools','DMS','Begleitung & Leistungen','KI allgemein','Off-Topic'];
 function normQ(q){
